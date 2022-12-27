@@ -1,4 +1,25 @@
 //Base
-@import './Base/colors.scss';
-@import './Base/main.scss';
-@import './Base/typography.scss';
+@import './base/colors.scss';
+@import './base/main.scss';
+@import './base/typography.scss';
+
+//Components 
+@import './components/animations.scss';
+@import './components/cards.scss';
+
+//Layout
+@import './layout/footer.scss';
+@import './layout/grid.scss';
+@import './layout/header.scss';
+@import './layout/main.scss';
+
+//Vendors 
+@import './vendors/bootstrap.scss';
+@import './vendors/jquery-ui.scss';
+
+//Views
+@import './views/about-us.scss';
+@import './views/contact.scss';
+@import './views/home.scss';
+@import './views/restaurant.scss';
+@import './views/services.scss';
