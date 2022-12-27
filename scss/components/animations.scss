@@ -1,25 +1,2 @@
 //Parallax 
-.parallas, .main, .texto{margin:0 auto}
 
-.parallax{
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size:  cover;
-	height:30rem;
-	max-width: 100%;
-	position: relative
-}
-
-.texto-interior{
-	color:#fff;
-	font-size: 2rem;
-	font-weight: bold;
-	left: 10%;
-	position: absolute;
-	text-align: center;
-	top:40%;
-	width: 80%
-}
-	
-.img-uno{background-image: url('https://tinyurl.com/jp56xcg')}
