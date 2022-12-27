@@ -2,31 +2,20 @@
   margin: 0%;
   padding: 0%; }
 
-.parallas, .main, .texto {
-  margin: 0 auto; }
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 90px;
+  height: auto;
+  grid-area: main;
+  padding: 5%;
+  background-color: #ffff; }
 
-.parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 30rem;
-  max-width: 100%;
-  position: relative; }
+body {
+  display: grid;
+  grid-column-gap: 10% 10% 10% 10%;
+  grid-template-areas: "header header header header"  "main main main main"  "footer footer footer footer"; }
 
-.sect-hero {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: bold;
-  left: 10%;
-  position: absolute;
-  text-align: center;
-  top: 40%;
-  width: 80%; }
-
-.parallax .sect-hero {
-  margin: 20px; }
-
-img.imghome {
-  width: 100%;
-  height: 500px; }
+main {
+  background-image: url(https://images.pexels.com/photos/14840714/pexels-photo-14840714.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load); }
