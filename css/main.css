@@ -2,6 +2,9 @@
   margin: 0%;
   padding: 0%; }
 
+.parallas, .main, .texto {
+  margin: 0 auto; }
+
 .parallax {
   background-attachment: fixed;
   background-position: center;
