@@ -35,6 +35,11 @@ main {
 .img-uno {
   background-image: url(https://images.pexels.com/photos/4091169/pexels-photo-4091169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  margin: 0% 5%; }
+
 @media screen and (max-width: 767px) {
   /* Generales */
   body {
