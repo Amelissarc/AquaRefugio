@@ -1,16 +1,14 @@
 * {
     margin: 0%;
     padding: 0%;
-    width: 100%;
 }
 
 main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     height: auto;
     grid-area: main;
-    padding: 5%;
     background-color: #ffff; 
 }
   

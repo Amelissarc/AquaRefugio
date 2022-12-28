@@ -1,0 +1,15 @@
+@media screen and (max-width: 767px) {
+    /* Generales */
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    section.about-us {
+        display: flex;
+        flex-direction: column
+    }
+}

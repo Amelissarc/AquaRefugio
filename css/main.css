@@ -1,16 +1,67 @@
 * {
   margin: 0%;
-  padding: 0%;
-  width: 100%; }
+  padding: 0%; }
 
 main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   height: auto;
   grid-area: main;
-  padding: 5%;
   background-color: #ffff; }
 
-main {
-  background-image: url(https://images.pexels.com/photos/14840714/pexels-photo-14840714.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load); }
+.parallas, .main, .texto {
+  margin: 0 auto; }
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30rem;
+  max-width: 100%;
+  position: relative; }
+
+.texto-interior {
+  color: #fff;
+  font-size: 60px;
+  font-weight: bold;
+  left: 10%;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  width: 80%; }
+
+.img-uno {
+  background-image: url(https://images.pexels.com/photos/4091169/pexels-photo-4091169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); }
+
+@media screen and (max-width: 767px) {
+  /* Generales */
+  body {
+    display: flex;
+    flex-direction: column; }
+  main {
+    display: flex;
+    flex-direction: column; }
+  section.about-us {
+    display: flex;
+    flex-direction: column; } }
+
+.imghome {
+  width: 100%; }
+
+.about-us {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin: 5%; }
+  .about-us img {
+    width: 340px;
+    height: 250px;
+    border-radius: 37% 63% 70% 30% / 30% 37% 63% 70%;
+    margin-top: 20px; }
+
+.article {
+  margin: 0px 5px 0px 5px;
+  padding: 10px 20px 10px 20px;
+  text-align: center; }

@@ -1,4 +1,24 @@
 // Images and content
-main {
-  background-image: url(https://images.pexels.com/photos/14840714/pexels-photo-14840714.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load)
+.imghome {
+    width: 100%;
+}
+
+//General
+.about-us {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin: 5%;
+    
+    img {
+        width: 340px;
+        height: 250px;
+        border-radius: 37% 63% 70% 30% / 30% 37% 63% 70% ;
+        margin-top: 20px;
+}
+}
+.article {
+    margin: 0px 5px 0px 5px;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
 }
