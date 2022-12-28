@@ -1,6 +1,7 @@
 * {
     margin: 0%;
     padding: 0%;
+    width: 100%;
 }
 
 main {
@@ -11,7 +12,8 @@ main {
     height: auto;
     grid-area: main;
     padding: 5%;
-    background-color: #ffff; }
+    background-color: #ffff; 
+}
   
 body {
     display: grid;
