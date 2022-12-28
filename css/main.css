@@ -38,7 +38,13 @@ main {
 footer {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
   margin: 0% 5%; }
+  footer div.colum {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
 
 @media screen and (max-width: 767px) {
   /* Generales */
