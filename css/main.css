@@ -35,11 +35,14 @@ main {
 .img-uno {
   background-image: url(https://images.pexels.com/photos/4091169/pexels-photo-4091169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); }
 
+div.col .card-img-top {
+  aspect-ratio: 3/2; }
+
 footer {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 0% 5%; }
   footer div.colum {
     display: flex;
@@ -73,6 +76,7 @@ footer {
     margin-top: 20px; }
 
 .article {
+  text-align: center;
   margin: 0px 5px 0px 5px;
   padding: 10px 20px 10px 20px;
   text-align: center; }
