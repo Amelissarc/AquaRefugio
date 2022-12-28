@@ -48,7 +48,8 @@ footer {
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-evenly;
-  margin: 0% 5%; }
+  margin-top: 5%;
+  background-image: url(/assets/wave-haikei.svg); }
   footer div.colum {
     display: flex;
     flex-direction: column;
@@ -85,3 +86,8 @@ footer {
   margin: 0px 5px 0px 5px;
   padding: 10px 20px 10px 20px;
   text-align: center; }
+
+.img_parrot {
+  display: flex;
+  align-items: center;
+  justify-content: center; }

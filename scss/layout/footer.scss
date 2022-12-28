@@ -3,10 +3,11 @@ footer {
     flex-direction: row;
     align-items: flex-start;
     justify-content:space-evenly;
-    margin: 0% 5%;
+    margin-top: 5%;
+    background-image:url(/assets/wave-haikei.svg);
     div.colum {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
     }
-}
+}   
