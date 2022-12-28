@@ -2,4 +2,8 @@ footer {
     display: flex;
     flex-direction: row;
     margin: 0% 5%;
+    div.colum {
+        display: flex;
+        justify-content: space-evenly;
+    }
 }
