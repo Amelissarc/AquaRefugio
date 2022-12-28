@@ -2,12 +2,38 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content:space-evenly;
+    justify-content:space-around;
+    font-size: 16px;
     margin-top: 5%;
-    background-image:url(/assets/wave-haikei.svg);
+    background-color:black;
+    color: white;
     div.colum {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        margin-top: 20px;
+        font-size: 16px;
+        ul a {
+            list-style: none;
+            text-decoration: none;
+            color: white;
+        }
+        ul a li {
+            list-style: none;
+        }
+        ol, ul {
+            padding-left: 0;
+        }
     }
+    div.contacto a {
+        color: white;
+        text-decoration: none;
+        line-height: 1.8;
+        font-size: 16px;
+    }
+    div.redes {
+
+    }
+    
+
 }   

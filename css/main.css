@@ -47,13 +47,30 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  font-size: 16px;
   margin-top: 5%;
-  background-image: url(/assets/wave-haikei.svg); }
+  background-color: black;
+  color: white; }
   footer div.colum {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    margin-top: 20px;
+    font-size: 16px; }
+    footer div.colum ul a {
+      list-style: none;
+      text-decoration: none;
+      color: white; }
+    footer div.colum ul a li {
+      list-style: none; }
+    footer div.colum ol, footer div.colum ul {
+      padding-left: 0; }
+  footer div.contacto a {
+    color: white;
+    text-decoration: none;
+    line-height: 1.8;
+    font-size: 16px; }
 
 @media screen and (max-width: 767px) {
   /* Generales */
