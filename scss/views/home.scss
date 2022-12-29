@@ -23,12 +23,26 @@
     margin: 0px 5px 0px 5px;
     padding: 10px 20px 10px 20px;
     text-align: center;
+    p {
+        margin: 0px 20px;
+        padding: 0% 8%;
+        padding-right: 0%;
+        margin-right: 10%;
+        text-align: justify;
+    }
+    p.art {
+        margin: 0px 20px;
+        padding: 0% 10%;
+        text-align: center;
+    }
 }
 
 .img_parrot {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
+    margin-right: 110px;
 }
 
 .title {
@@ -41,6 +55,7 @@
     margin: 5%;
     p {
         margin: 20px;
+        text-align: justify;margin: 20px;
         text-align: justify;
     }
 

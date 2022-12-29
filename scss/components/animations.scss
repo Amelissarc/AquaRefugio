@@ -28,3 +28,18 @@
 .carousel-inner {
 	margin-bottom: 20px;
 }
+
+//Video 
+.video {
+	display: flex;
+	align-items: center;
+	justify-content:left;
+    iframe {
+	display: flex;
+	width: 10px;
+	height: 300px;
+	margin: 0% 13%;
+	border-radius: 8px;
+	border: solid black;
+}
+}

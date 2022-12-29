@@ -1,0 +1,21 @@
+body{
+    display: grid;
+    grid-column-gap: 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-areas:
+    "header header header header header header  header header "
+    "main main main main main main main main"
+    "footer footer footer footer footer footer footer footer"
+    ;
+}
+
+@media screen and (max-width: 767px) {
+    body{
+        display: grid;
+        grid-column-gap: 10% 10%;
+        grid-template-areas:
+        "header header"
+        "main main "
+        "footer footer "
+        ;
+    }       
+}

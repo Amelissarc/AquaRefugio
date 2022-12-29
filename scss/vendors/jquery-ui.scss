@@ -1,3 +1,5 @@
+//Celular
+
 @media screen and (max-width: 767px) {
     /* Generales */
     body {
@@ -60,5 +62,192 @@
             align-items: center;
             text-align: center;
         }         
+    }
+    //Home
+    div.article {
+        text-align: center;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        text-align: center;
+        p {
+            margin: 0px 0px;
+            padding: 0% 0%;
+            padding-right: 0%;
+            margin-right: 0%;
+            text-align: justify;
+        }
+        p.art {
+            margin: 0px 10px;
+            padding: 0% 0%;
+            text-align: center;
+            margin-bottom: 5%;
+        }
+    }
+    .img_parrot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        margin-left: 110px;
+    }
+    
+    .title {
+        text-align: center;
+    }
+    
+    div.ub {
+        display: flex;
+        flex-direction: column;
+        margin: 5%;
+        p {
+            margin: 20px;
+            text-align: justify;margin: 20px;
+            text-align: justify;
+        }
+    
+    }
+    .map iframe {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .video {
+        display: flex;
+        align-items: center;
+        justify-content:left;
+        iframe {
+        display: flex;
+        width: 100%;
+        height: 300px;
+        margin: 0% 2%;
+        border-radius: 8px;
+        border: solid black;
+        }
+    }
+}
+
+//Tablet
+
+@media screen and (min-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    section.about-us {
+        display: flex;
+        flex-direction: row;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        div.container-footer{
+            display: flex;
+            flex-direction: column;
+        }
+        div.footer1 {
+            display: flex;
+            flex-direction:row;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+            margin: 20px;
+            font-size: 16px;
+            .colum {
+               width: 100%;
+               margin: inherit;
+            }
+            ul a {
+                list-style: none;
+                text-decoration: none;
+                color: white;
+            }
+            ul a li {
+                list-style: none;
+            }
+            ol, ul {
+                padding-left: 0;
+            }
+        } 
+        .serv-link {
+            display: flex;
+            justify-content: space-around;
+            li {
+                text-align: left;
+            }
+            .serv {
+                padding-right: 20px;
+            }
+        }   
+        div.footer2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }         
+    }
+    //Home
+    div.article {
+        text-align: center;
+        margin: 0px 0px 0px 0px;
+        padding: 0px -200px 0px 0px;
+        text-align: center;
+        p {
+            margin: 0px 0px;
+            padding: 0% 0%;
+            padding-right: 0%;
+            margin-right: 0%;
+            text-align: justify;
+        }
+        p.art {
+            margin: 0px 10px;
+            padding: 0% 0%;
+            text-align: center;
+            margin-bottom: 5%;
+        }
+    }
+    div.img_parrot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        margin-right:0%;
+        margin-left: 50px;
+    }
+    
+    .title {
+        text-align: center;
+    }
+    
+    div.ub {
+        display: flex;
+        flex-direction: row;
+        margin: 5%;
+        p {
+            margin: 20px;
+            text-align: justify;margin: 20px;
+            text-align: justify;
+        }
+    
+    }
+    .map iframe {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .video {
+        display: flex;
+        align-items: center;
+        justify-content:left;
+        iframe {
+        display: flex;
+        width: 100%;
+        height: 300px;
+        margin: 0% 2%;
+        border-radius: 8px;
+        border: solid black;
+        }
     }
 }
