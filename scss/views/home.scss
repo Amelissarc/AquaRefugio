@@ -15,7 +15,7 @@
         height: 250px;
         border-radius: 37% 63% 70% 30% / 30% 37% 63% 70% ;
         margin-top: 20px;
-}
+    }
 }
 
 .article {
@@ -29,4 +29,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.ub {
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+    p {
+        margin: 20px;
+        text-align: justify;
+    }
+
+}
+.map iframe {
+    width: 100%;
+    margin-top: 20px;
 }

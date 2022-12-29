@@ -95,6 +95,9 @@ footer {
     flex-direction: column;
     align-items: center; }
 
+section {
+  margin-top: 20px; }
+
 @media screen and (max-width: 767px) {
   /* Generales */
   body {
@@ -169,3 +172,18 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.title {
+  text-align: center; }
+
+.ub {
+  display: flex;
+  flex-direction: row;
+  margin: 5%; }
+  .ub p {
+    margin: 20px;
+    text-align: justify; }
+
+.map iframe {
+  width: 100%;
+  margin-top: 20px; }
