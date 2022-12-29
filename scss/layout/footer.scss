@@ -21,6 +21,11 @@ footer {
         .colum {
            width: 100%;
            margin: inherit;
+           text-align: center;
+           p{
+            margin-top: 30px;
+            text-align: justify;
+           }
         }
         ul a {
             list-style: none;
@@ -43,6 +48,9 @@ footer {
     }
     .serv-link {
         display: flex;
+        justify-content: space-evenly;
+        text-align: left;
+        margin-top: 30px;
         .serv {
             padding-right: 20px;
         }
