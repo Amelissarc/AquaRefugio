@@ -60,11 +60,11 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 20px;
+    margin: 20px;
     font-size: 16px; }
     footer div.footer1 .colum {
       width: 100%;
-      margin-right: 100px; }
+      margin: inherit; }
     footer div.footer1 ul a {
       list-style: none;
       text-decoration: none;
@@ -98,7 +98,45 @@ footer {
     flex-direction: column; }
   section.about-us {
     display: flex;
-    flex-direction: column; } }
+    flex-direction: column; }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    footer div.container-footer {
+      display: flex;
+      flex-direction: column; }
+    footer div.footer1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      margin: 20px;
+      font-size: 16px; }
+      footer div.footer1 .colum {
+        width: 100%;
+        margin: inherit; }
+      footer div.footer1 ul a {
+        list-style: none;
+        text-decoration: none;
+        color: white; }
+      footer div.footer1 ul a li {
+        list-style: none; }
+      footer div.footer1 ol, footer div.footer1 ul {
+        padding-left: 0; }
+    footer .serv-link {
+      display: flex;
+      justify-content: space-around; }
+      footer .serv-link li {
+        text-align: left; }
+      footer .serv-link .serv {
+        padding-right: 20px; }
+    footer div.footer2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center; } }
 
 .imghome {
   width: 100%; }

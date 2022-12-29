@@ -12,4 +12,53 @@
         display: flex;
         flex-direction: column
     }
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        div.container-footer{
+            display: flex;
+            flex-direction: column;
+        }
+        div.footer1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+            margin: 20px;
+            font-size: 16px;
+            .colum {
+               width: 100%;
+               margin: inherit;
+            }
+            ul a {
+                list-style: none;
+                text-decoration: none;
+                color: white;
+            }
+            ul a li {
+                list-style: none;
+            }
+            ol, ul {
+                padding-left: 0;
+            }
+        } 
+        .serv-link {
+            display: flex;
+            justify-content: space-around;
+            li {
+                text-align: left;
+            }
+            .serv {
+                padding-right: 20px;
+            }
+        }   
+        div.footer2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }         
+    }
 }
