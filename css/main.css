@@ -50,27 +50,43 @@ footer {
   justify-content: space-around;
   font-size: 16px;
   margin-top: 5%;
+  padding-bottom: 10px;
   background-color: black;
   color: white; }
-  footer div.colum {
+  footer div.container-footer {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; }
+  footer div.footer1 {
+    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     margin-top: 20px;
     font-size: 16px; }
-    footer div.colum ul a {
+    footer div.footer1 .colum {
+      width: 100%;
+      margin-right: 100px; }
+    footer div.footer1 ul a {
       list-style: none;
       text-decoration: none;
       color: white; }
-    footer div.colum ul a li {
+    footer div.footer1 ul a li {
       list-style: none; }
-    footer div.colum ol, footer div.colum ul {
+    footer div.footer1 ol, footer div.footer1 ul {
       padding-left: 0; }
   footer div.contacto a {
     color: white;
     text-decoration: none;
-    line-height: 1.8;
-    font-size: 16px; }
+    line-height: 2.6;
+    font-size: 30px;
+    margin-right: 15px; }
+  footer .serv-link {
+    display: flex; }
+    footer .serv-link .serv {
+      padding-right: 20px; }
+  footer div.footer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
 
 @media screen and (max-width: 767px) {
   /* Generales */
