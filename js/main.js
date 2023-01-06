@@ -1,16 +1,6 @@
-/*  console.log ("Hi world");
-document.getElementById ("myTitle").innerHTML= "We go";
+function solicitarNombre(){
+    let nombreIngresado = prompt("Ingresar nombre");
+    console.log("El nombre ingresado es" + nombreIngresado);
+}
 
-//------------------------------------------------------
-
-//Class 01 - Generals concepts __ syntax and variables
-console.log ("class 01");
-
-//Variables
-
-/* We don´t use "VAR" as it can be declared more then once. 
-var name = "Santiago";
-var name = "Luis";
-console.log(name) ; 
-*/
-
+solicitarNombre();
