@@ -11,15 +11,20 @@
 	position: relative
 }
 
-.texto-interior{
+.logo-interior{
 	color:#fff;
 	font-size: 60px;
 	font-weight: bold;
 	left: 10%;
 	position: absolute;
 	text-align: center;
-	top:40%;
-	width: 80%
+	top:18%;
+	width: 80%;
+}
+
+img.logo-aqua {
+	width: 400px;
+	height: auto;
 }
 
 .img-uno{background-image: url(https://images.pexels.com/photos/4091169/pexels-photo-4091169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)}

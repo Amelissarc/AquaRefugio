@@ -11,10 +11,12 @@ function datosReserva(){
     let nombreIngresado;
     do {
         nombreIngresado = prompt("Ingresar nombre: ");
-        if (!isNaN(nombreIngresado) === false)
+        if (!nombreIngresado)
         console.log("Por favor ingrese su nombre");
-    } while(isNaN(nombreIngresado) === false)
-    console.log("El nombre ingresado es " + String(nombreIngresado));
+        if (!isNaN(nombreIngresado))
+        console.log("Por favor ingrese su nombre");
+    } while(!nombreIngresado)
+    console.log("El nombre ingresado es " + nombreIngresado);
 
     let apellidoIngresado;
     do {
