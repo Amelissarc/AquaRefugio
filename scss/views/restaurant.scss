@@ -1,0 +1,36 @@
+.title-restaurant {
+    align-items: center;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .entradas {
+        margin-left: 10%;
+        ul li {
+            list-style: none;
+            text-decoration: none;
+            line-height: 3;
+        }
+        li i {
+            margin-right: 5px;
+            font-size: 24px;
+        }
+    }
+    .img-entradas {
+        overflow:hidden;
+    }  
+}
+
+.desayunos {
+    .card-body-restaurant p {
+        list-style: none;
+        text-decoration: none;
+        line-height: 3;
+        text-align: center;
+        font-size: 24px;
+    }
+}

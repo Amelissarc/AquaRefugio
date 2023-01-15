@@ -39,6 +39,9 @@ img.logo-aqua {
 .img-uno {
   background-image: url(https://images.pexels.com/photos/4091169/pexels-photo-4091169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); }
 
+.img-dos {
+  background-image: url(https://images.pexels.com/photos/4210858/pexels-photo-4210858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); }
+
 .carousel-inner {
   margin-bottom: 20px; }
 
@@ -241,7 +244,26 @@ section {
       height: 300px;
       margin: 0% 2%;
       border-radius: 8px;
-      border: solid black; } }
+      border: solid black; }
+  /* Restaurante */
+  .menu {
+    display: flex;
+    flex-direction: column; }
+    .menu .entradas {
+      margin-left: 0; }
+      .menu .entradas ul li {
+        list-style: none;
+        text-decoration: none;
+        line-height: 3; }
+      .menu .entradas li i {
+        margin-right: 5px;
+        font-size: 24px; }
+    .menu .img-entradas {
+      overflow: hidden; }
+      .menu .img-entradas img, .menu .img-entradas svg {
+        vertical-align: middle;
+        width: 420px;
+        overflow: hidden; } }
 
 @media screen and (min-width: 768px) {
   body {
@@ -396,3 +418,31 @@ section {
 .map iframe {
   width: 100%;
   margin-top: 20px; }
+
+.title-restaurant {
+  align-items: center;
+  text-align: center;
+  margin-top: 5%; }
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .menu .entradas {
+    margin-left: 10%; }
+    .menu .entradas ul li {
+      list-style: none;
+      text-decoration: none;
+      line-height: 3; }
+    .menu .entradas li i {
+      margin-right: 5px;
+      font-size: 24px; }
+  .menu .img-entradas {
+    overflow: hidden; }
+
+.desayunos .card-body-restaurant p {
+  list-style: none;
+  text-decoration: none;
+  line-height: 3;
+  text-align: center;
+  font-size: 24px; }
