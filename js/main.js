@@ -92,4 +92,4 @@ calendario();
         opciones = prompt("\nPresiona X para finalizar." );
     }   
 
-    alert('Reserva realizada con éxito') 
+    alert('Reserva realizada con éxito')
