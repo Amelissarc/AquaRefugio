@@ -42,6 +42,9 @@ img.logo-aqua {
 .img-dos {
   background-image: url(https://images.pexels.com/photos/4210858/pexels-photo-4210858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); }
 
+.img-tres {
+  background-image: url(https://images.pexels.com/photos/991970/pexels-photo-991970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); }
+
 .carousel-inner {
   margin-bottom: 20px; }
 
@@ -263,7 +266,43 @@ section {
       .menu .img-entradas img, .menu .img-entradas svg {
         vertical-align: middle;
         width: 420px;
-        overflow: hidden; } }
+        overflow: hidden; }
+  .carnesalcarbon {
+    display: flex;
+    flex-direction: column; }
+    .carnesalcarbon .carnes {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column; }
+    .carnesalcarbon .entradas {
+      margin-left: 0; }
+      .carnesalcarbon .entradas ul li {
+        list-style: none;
+        text-decoration: none;
+        line-height: 3; }
+      .carnesalcarbon .entradas li i {
+        margin-right: 5px;
+        font-size: 24px; }
+    .carnesalcarbon .img-entradas {
+      overflow: hidden; }
+      .carnesalcarbon .img-entradas img, .carnesalcarbon .img-entradas svg {
+        vertical-align: middle;
+        width: 420px;
+        overflow: hidden; }
+  .bebidas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; }
+    .bebidas .entradas {
+      width: 280px; }
+      .bebidas .entradas ul li {
+        list-style: none;
+        text-decoration: none;
+        line-height: 3; }
+      .bebidas .entradas li i {
+        font-size: 24px; } }
 
 @media screen and (min-width: 768px) {
   body {
@@ -446,3 +485,43 @@ section {
   line-height: 3;
   text-align: center;
   font-size: 24px; }
+
+.carnes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .carnes .entradas {
+    margin-right: 10%; }
+    .carnes .entradas ul li {
+      list-style: none;
+      text-decoration: none;
+      line-height: 3;
+      padding-left: 25%; }
+    .carnes .entradas li i {
+      font-size: 24px; }
+    .carnes .entradas li p {
+      text-align: center;
+      padding: 5%;
+      line-height: 1.6; }
+  .carnes .img-entradas {
+    overflow: hidden; }
+
+.picadas {
+  margin: 0% 25%;
+  text-align: center; }
+  .picadas .title-restaurant {
+    padding-bottom: 20px; }
+
+.bebidas {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; }
+  .bebidas .entradas {
+    margin-right: 5%;
+    margin-top: 5%; }
+    .bebidas .entradas ul li {
+      list-style: none;
+      text-decoration: none;
+      line-height: 3; }
+    .bebidas .entradas li i {
+      font-size: 24px; }

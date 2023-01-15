@@ -163,6 +163,53 @@
             }
         }
     }
+    .carnesalcarbon {
+        display: flex;
+        flex-direction:column;
+        .carnes {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .entradas {
+            margin-left: 0;
+            ul li {
+                list-style: none;
+                text-decoration: none;
+                line-height: 3;
+            }
+            li i {
+                margin-right: 5px;
+                font-size: 24px;
+            }
+        }
+        .img-entradas {
+            overflow:hidden;
+            img, svg {
+                vertical-align: middle;
+                width: 420px;
+                overflow:hidden;
+            }
+        }
+    }
+    .bebidas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        .entradas {
+            width: 280px;
+            ul li {
+                list-style: none;
+                text-decoration: none;
+                line-height: 3;
+            }
+            li i {
+                font-size: 24px;
+            }
+        }
+    }
 }
 
 //Tablet

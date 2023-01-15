@@ -34,3 +34,55 @@
         font-size: 24px;
     }
 }
+
+.carnes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .entradas {
+        margin-right: 10%;
+        ul li {
+            list-style: none;
+            text-decoration: none;
+            line-height: 3;
+            padding-left: 25%;
+        }
+        li i {
+            font-size: 24px;
+        }
+        li p {
+          text-align: center;
+          padding: 5%;
+          line-height: 1.6;
+        }
+    }
+    .img-entradas {
+        overflow:hidden;
+    }  
+}
+
+.picadas {
+    margin: 0% 25%;
+    text-align: center;
+    .title-restaurant {
+        padding-bottom: 20px;
+    }
+}
+
+.bebidas {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .entradas {
+        margin-right: 5%;
+        margin-top: 5%;
+        ul li {
+            list-style: none;
+            text-decoration: none;
+            line-height: 3;
+        }
+        li i {
+            font-size: 24px;
+        }
+    }
+}
