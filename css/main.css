@@ -302,7 +302,14 @@ section {
         text-decoration: none;
         line-height: 3; }
       .bebidas .entradas li i {
-        font-size: 24px; } }
+        font-size: 24px; }
+  *, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; }
+  .entradas {
+    margin-left: 0%;
+    padding: 0%; } }
 
 @media screen and (min-width: 768px) {
   body {
