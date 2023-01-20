@@ -1,5 +1,6 @@
 .bookings {
     margin: 10px 20px;
+    padding: 5% 0 2%;
 }
 .tipo-alojamiento {
     align-items: center;
@@ -9,7 +10,6 @@
         text-align: center;
     }
 }
-
 .row {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
@@ -18,5 +18,33 @@
     margin-top: calc(-1 * var(--bs-gutter-y));
     margin-right: calc(-.5 * var(--bs-gutter-x));
     margin-left: calc(-.5 * var(--bs-gutter-x));
-    justify-content: center;
+    justify-content:space-evenly;
+}
+
+.title-hospedaje {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.cabañas {
+    display: flex;
+    flex-direction: column;
+    .col-caracteristicas {
+        width: 500px;
+        padding: 0% 5% 5% 10%;
+        img {
+            height: 300px;
+        }
+    }
+    .card-body {
+        ul li {
+            text-decoration: none;
+            list-style: none;
+            line-height: 2;
+        }
+        i {
+            font-size: 20px;
+            padding-right: 10px;
+        }
+    }
 }

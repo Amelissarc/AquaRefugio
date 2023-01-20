@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0%;
   padding: 0%; }
@@ -409,7 +410,8 @@ section {
       border: solid black; } }
 
 .bookings {
-  margin: 10px 20px; }
+  margin: 10px 20px;
+  padding: 5% 0 2%; }
 
 .tipo-alojamiento {
   align-items: center;
@@ -426,7 +428,27 @@ section {
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-.5 * var(--bs-gutter-x));
   margin-left: calc(-.5 * var(--bs-gutter-x));
-  justify-content: center; }
+  justify-content: space-evenly; }
+
+.title-hospedaje {
+  text-align: center;
+  margin-bottom: 5%; }
+
+.cabañas {
+  display: flex;
+  flex-direction: column; }
+  .cabañas .col-caracteristicas {
+    width: 500px;
+    padding: 0% 5% 5% 10%; }
+    .cabañas .col-caracteristicas img {
+      height: 300px; }
+  .cabañas .card-body ul li {
+    text-decoration: none;
+    list-style: none;
+    line-height: 2; }
+  .cabañas .card-body i {
+    font-size: 20px;
+    padding-right: 10px; }
 
 .imghome {
   width: 100%; }
