@@ -43,7 +43,7 @@
               <div class="card h-100">
                 <img src="../assets/img/hospedaje/cabaña.jpeg" class="card-img" alt="imgcard">
                 <div class="card-body">
-                  <h5 class="card-title-hospedaje">Cabañas</h5>
+                  <a class="card-title-hospedaje" href="#cabañas">Cabañas</a>
                 </div>
               </div>
             </div>
@@ -51,7 +51,7 @@
               <div class="card h-100">
                 <img src="../assets/img/hospedaje/hotel.jpeg" class="card-img" alt="imgcard">
                 <div class="card-body">
-                  <h5 class="card-title-hospedaje">Habitaciones</h5>
+                  <a class="card-title-hospedaje"href="#habitaciones">Habitaciones</a>
                 </div>
               </div>
             </div>
@@ -60,7 +60,7 @@
               <div class="card h-100">
                 <img src="../assets/img/hospedaje/camping.jpeg" class="card-img" alt="imgcard">
                 <div class="card-body">
-                  <h5 class="card-title-hospedaje">Camping</h5>
+                  <a class="card-title-hospedaje" href="#camping">Camping</a>
                 </div>
               </div>
             </div>
@@ -69,12 +69,12 @@
       </section>
         <!-- OUR BOOKING FORM MARKUP -->
        <div class="bookings">
-            <form class="row gx-3 gy-2 align-items-center">
-                <div class="col-sm-3">
+            <form class="row gx-2 gy-2 align-items-center">
+                <div class="col-sm-2">
                   <label class="visually-hidden" for="specificSizeInputName">Name</label>
                   <input type="text" class="form-control" id="specificSizeInputName" placeholder="User Name">
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                   <label class="visually-hidden" for="specificSizeSelect">Preference</label>
                   <select class="form-select" id="specificSizeSelect">
                     <option selected>guets</option>
@@ -83,11 +83,30 @@
                     <option value="3">Three</option>
                   </select>
                 </div>
+    
+                <div class="col-sm-2">
+                  <label class="visually-hidden" for="specificSizeInputCheckIn">Check In</label>
+                  <input type="text" class="form-control" id="specificSizeInputCheckIn" placeholder="Check In">
+                </div>
+                <div class="col-sm-2">
+                  <label class="visually-hidden" for="specificSizeInputCheckOut">Check Out</label>
+                  <input type="text" class="form-control" id="specificSizeInputCheckOut" placeholder="Check Out">
+                </div>
+                <div class="col-sm-2">
+                  <label class="visually-hidden" for="specificSizeSelectRooms">Preference</label>
+                  <select class="form-select" id="specificSizeSelectRooms">
+                    <option selected>rooms</option>
+                    <option value="1">Cabañas</option>
+                    <option value="2">Habitaciones</option>
+                    <option value="3">Camping</option>
+                  </select>
+                </div>
                 <div class="col-auto">
                   <button type="submit" class="btn btn-primary">Reserve</button>
                 </div>
               </form>
         </div>
+     <a name="cabañas"></a>
      <section class="cabañas">
       <h2 class="title-hospedaje">Cabañas chalet</h2>
       <div class="tipo-alojamiento cabañas">
@@ -107,7 +126,7 @@
           </div>
           <div class="col-caracteristicas">
             <div class="card h-100">
-              <img src="../assets/img/hospedaje/camahotel1.jpeg" class="card-img" alt="imgcard">
+              <img src="../assets/img/hospedaje/cabaña.jpeg" class="card-img" alt="imgcard">
               <div class="card-body">
                 <ul>
                   <li><i class="fa-solid fa-bed"></i>Cama matrimonial</li>
@@ -119,9 +138,55 @@
           </div>
         </div>
       </div>
-      
-      
+     </section>
 
+     <a name="habitaciones"></a>
+     <section class="habitaciones">
+      <h2 class="title-hospedaje">Nuestras habitaciones</h2>
+      <div class="tipo-alojamiento habitacion">
+        <div class="rooms">
+          <div class="room-caracteristicas">
+            <div>
+              <img src="../assets/img/hospedaje/camahotel1.jpeg" class="card-img" alt="imgcard">
+            </div>
+            <div class="card-body">
+              <ul>
+                <li><i class="fa-solid fa-bed"></i>Cama matrimonial</li>
+                <li><i class="fa-solid fa-people-roof"></i>Máximo 4personas</li>
+                <li><i class="fa-solid fa-mug-hot"></i>Desayuno: Noincluido</li>
+                <li><i class="fa-solid fa-car"></i>Estacionamiento: Sí</li>
+              </ul>
+            </div>
+          </div>
+          <div class="room-caracteristicas">
+            <div class="card-body">
+              <ul>
+                <li><i class="fa-solid fa-bed"></i>Cama matrimonial</li>
+                <li><i class="fa-solid fa-people-roof"></i>Máximo 4personas</li>
+                <li><i class="fa-solid fa-mug-hot"></i>Desayuno: Noincluido</li>
+                <li><i class="fa-solid fa-car"></i>Estacionamiento: Sí</li>
+              </ul>
+            </div>
+            <div>
+              <img src="../assets/img/hospedaje/hotel.jpeg" class="card-img" alt="imgcard">
+            </div>
+          </div>
+      </div>
+     </section>
+
+     <a name="camping"></a>
+     <section class="cabañas">
+      <h2 class="title-hospedaje">Camping</h2>
+      <div class="parallax img-cuatro" id="m">
+      </div><!-- .parallax --> 
+        <div class="card-body">
+            <ul>
+              <li><i class="fa-solid fa-bed"></i>Cama matrimonial</li>
+              <li><i class="fa-solid fa-people-roof"></i>Máximo 4personas<li>
+              <li><i class="fa-solid fa-mug-hot"></i>Desayuno: Noincluido<li>
+              <li><i class="fa-solid fa-car"></i>Estacionamiento: Sí</li>
+            </ul>
+        </div>
      </section>
         
           

@@ -6,8 +6,12 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    .card-title-hospedaje {
+    .card-body a {
+        display: block;
         text-align: center;
+        text-decoration: none;
+        color: $primary_color;
+        
     }
 }
 .row {
@@ -30,13 +34,58 @@
     display: flex;
     flex-direction: column;
     .col-caracteristicas {
-        width: 500px;
-        padding: 0% 5% 5% 10%;
+        width: 400px;
         img {
             height: 300px;
         }
     }
     .card-body {
+        ul li {
+            text-decoration: none;
+            list-style: none;
+            line-height: 2;
+        }
+        i {
+            font-size: 20px;
+            padding-right: 10px;
+        }
+    }
+}
+
+.habitaciones {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+
+    .tipo-alojamiento .habitacion {
+        display: flex;
+    }
+    .row {
+        --bs-gutter-x: 6.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap:nowrap;
+        margin-top: calc(-1 * var(--bs-gutter-y));
+        margin-right: calc(-.5 * var(--bs-gutter-x));
+        margin-left: calc(-.5 * var(--bs-gutter-x));
+        justify-content:space-evenly;
+    }
+    
+    .room-caracteristicas {
+        display: flex;
+        img {
+            width: 400px;
+            height: 300px;
+        }
+    }
+    .card-body {
+        width: 400px;
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+
         ul li {
             text-decoration: none;
             list-style: none;

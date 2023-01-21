@@ -46,6 +46,9 @@ img.logo-aqua {
 .img-tres {
   background-image: url(https://images.pexels.com/photos/991970/pexels-photo-991970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); }
 
+.img-cuatro {
+  background-image: url(https://images.pexels.com/photos/2526025/pexels-photo-2526025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); }
+
 .carousel-inner {
   margin-bottom: 20px; }
 
@@ -417,8 +420,11 @@ section {
   align-items: center;
   display: flex;
   justify-content: center; }
-  .tipo-alojamiento .card-title-hospedaje {
-    text-align: center; }
+  .tipo-alojamiento .card-body a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #000000; }
 
 .row {
   --bs-gutter-x: 1.5rem;
@@ -438,8 +444,7 @@ section {
   display: flex;
   flex-direction: column; }
   .cabañas .col-caracteristicas {
-    width: 500px;
-    padding: 0% 5% 5% 10%; }
+    width: 400px; }
     .cabañas .col-caracteristicas img {
       height: 300px; }
   .cabañas .card-body ul li {
@@ -449,6 +454,41 @@ section {
   .cabañas .card-body i {
     font-size: 20px;
     padding-right: 10px; }
+
+.habitaciones {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%; }
+  .habitaciones .tipo-alojamiento .habitacion {
+    display: flex; }
+  .habitaciones .row {
+    --bs-gutter-x: 6.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    justify-content: space-evenly; }
+  .habitaciones .room-caracteristicas {
+    display: flex; }
+    .habitaciones .room-caracteristicas img {
+      width: 400px;
+      height: 300px; }
+  .habitaciones .card-body {
+    width: 400px;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center; }
+    .habitaciones .card-body ul li {
+      text-decoration: none;
+      list-style: none;
+      line-height: 2; }
+    .habitaciones .card-body i {
+      font-size: 20px;
+      padding-right: 10px; }
 
 .imghome {
   width: 100%; }

@@ -3,7 +3,7 @@ Ahí hice modificaciones pero si te fijas no me esta tomando como quiero que suc
 */
 
 
-/* function datosReserva(){
+function datosReserva(){
     let nombreIngresado;
     do {
         nombreIngresado = prompt("Ingresar nombre: ");
@@ -75,7 +75,6 @@ calendario();
     let opciones = prompt("Elegí el hospedaje que deseas: \n1-Hotel. \n2-Cabaña. \n3-Camping. \nPresiona X para finalizar." );
     while(opciones !='X' && opciones !='x'){
         /* Opciones del menu */
-        /*
         switch (opciones) {
             case '1':
                 alert("Seleccionaste Hotel" );
@@ -93,5 +92,21 @@ calendario();
         opciones = prompt("\nPresiona X para finalizar." );
     }   
 
-    alert('Reserva realizada con éxito') */
-    
+    alert('Reserva realizada con éxito') 
+
+
+class Persona {
+    constructor (nombre, apellido) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+   
+   printPersona() {
+    console.log(`La reserva se realizo a nombre de ${this.nombre} ${this.apellido}`);
+   }
+
+   getNombre(){
+    return this.nombre;
+   }
+}
+
