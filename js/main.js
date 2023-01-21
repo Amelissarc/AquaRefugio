@@ -109,4 +109,3 @@ class Persona {
     return this.nombre;
    }
 }
-
