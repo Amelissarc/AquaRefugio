@@ -3,7 +3,7 @@ let cantidad = prompt ("¿Cuantos huéspedes van a ser?")
 
 const tomarReserva = () => {
     let nombre = prompt("Escribe el nombre de quien realizaremos la reserva")
-    console.log(`La reserva va a quedar a nombre de ${nombre} y se van a hospedar ${cantidad} personas`)
+    console.log(`La reserva se guardo con el nombre de ${nombre}; se van a alojar ${cantidad} personas`)
 }
 tomarReserva();
 
@@ -11,7 +11,7 @@ class hospedaje {
     constructor(tipo,precio) {
         this.tipo = tipo;
         this.precio = precio;
-        this.info = `Seleccionaste hospedarte en ${this.tipo}, el valor por noche es de $${this.precio}USD`;
+        this.info = `El hospedaje seleccionado es en ${this.tipo}, el valor por noche es de $${this.precio}USD`;
     }
     verInfo(){
         console.log(this.info)
