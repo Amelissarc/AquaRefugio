@@ -1,46 +1,44 @@
-/* Angie Melissa Rincón Cely 
-Ahí hice modificaciones pero si te fijas no me esta tomando como quiero que suceda
-*/
+let cantidad = prompt ("¿Cuantos huéspedes van a ser?")
 
 
-function datosReserva(){
-    let nombreIngresado;
-    do {
-        nombreIngresado = prompt("Ingresar nombre: ");
-
-        if (!nombreIngresado)
-        console.log("Por favor ingrese su nombre");
-
-        if (!isNaN(nombreIngresado))
-        console.log("Por favor ingrese su nombre");
-
-    } while(!nombreIngresado)
-    console.log("El nombre ingresado es " + nombreIngresado);
-
-    let apellidoIngresado;
-    do {
-        apellidoIngresado = prompt("Ingresar apellido: ");
-        if (!apellidoIngresado)
-        console.log("Por favor ingrese su apellido");
-        if (!isNaN(apellidoIngresado))
-        console.log("Por favor ingrese su apellido");
-    } while(!apellidoIngresado)
-    console.log("El apellido ingresado es " + apellidoIngresado);
+const tomarReserva = () => {
+    let nombre = prompt("Escribe el nombre de quien realizaremos la reserva")
+    console.log(`La reserva va a quedar a nombre de ${nombre} y se van a hospedar ${cantidad} personas`)
 }
-datosReserva(); 
+tomarReserva();
 
-let cantidadHuespedes;
-    do {
-        cantidadHuespedes = prompt("Seleccione cantidad de huéspedes: ");
+class hospedaje {
+    constructor(tipo,precio) {
+        this.tipo = tipo;
+        this.precio = precio;
+        this.info = `Seleccionaste hospedarte en ${this.tipo}, el valor por noche es de $${this.precio}USD`;
+    }
+    verInfo(){
+        console.log(this.info)
+    }
+}
 
-        if(!cantidadHuespedes)
-        console.log("Ingrese número");
+alert("Selecciona el tipo de hospedaje que deseas");
+let opciones = prompt("1: cabaña, 2: hotel, 3: camping");
 
-        if(isNaN(cantidadHuespedes))
-        console.log("Ingrese un número");
+if (opciones == 1) {
+    let cabaña = new hospedaje("cabaña", 250);
+    cabaña.verInfo();
+}
 
-    } while(!cantidadHuespedes)
-    console.log("La reserva se realizara para " + cantidadHuespedes + " personas.");
+else if (opciones == 2) {
+    let hotel = new hospedaje("hotel", 350);
+    hotel.verInfo();
+} 
+
+else if (opciones == 3) {
+    let camping = new hospedaje("camping", 120);
+    camping.verInfo();
+}
+else {
+    alert("Por favor seleccione una opción valida")
+}
+
 
 function calendario() {
 
@@ -72,40 +70,6 @@ function calendario() {
 }
 calendario();
 
-    let opciones = prompt("Elegí el hospedaje que deseas: \n1-Hotel. \n2-Cabaña. \n3-Camping. \nPresiona X para finalizar." );
-    while(opciones !='X' && opciones !='x'){
-        /* Opciones del menu */
-        switch (opciones) {
-            case '1':
-                alert("Seleccionaste Hotel" );
-                break;
-            case '2':
-                alert("Seleccionaste Cabaña");
-                break;
-            case '3':
-                alert("Seleccionaste Camping");
-                break;
-            default:
-                alert("Elegiste una opción inválida");
-                break;
-        } 
-        opciones = prompt("\nPresiona X para finalizar." );
-    }   
+      
 
-    alert('Reserva realizada con éxito') 
-
-
-class Persona {
-    constructor (nombre, apellido) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-    }
-   
-   printPersona() {
-    console.log(`La reserva se realizo a nombre de ${this.nombre} ${this.apellido}`);
-   }
-
-   getNombre(){
-    return this.nombre;
-   }
-}
+alert('Reserva realizada con éxito') 
