@@ -1,8 +1,6 @@
-let cantidad = prompt ("¿Cuantos huéspedes van a ser?")
-
-
 const tomarReserva = () => {
-    let nombre = prompt("Escribe el nombre de quien realizaremos la reserva")
+    let nombre = prompt("Escribe el nombre de quien realizará la reserva")
+    let cantidad = prompt ("¿Cuantos huéspedes van a ser?")
     console.log(`La reserva se guardo con el nombre de ${nombre}; se van a alojar ${cantidad} personas`)
 }
 tomarReserva();
@@ -22,17 +20,17 @@ alert("Selecciona el tipo de hospedaje que deseas");
 let opciones = prompt("1: cabaña, 2: hotel, 3: camping");
 
 if (opciones == 1) {
-    let cabaña = new hospedaje("cabaña", 250);
+    const cabaña = new hospedaje("cabaña", 250);
     cabaña.verInfo();
 }
 
 else if (opciones == 2) {
-    let hotel = new hospedaje("hotel", 350);
+    const hotel = new hospedaje("hotel", 350);
     hotel.verInfo();
 } 
 
 else if (opciones == 3) {
-    let camping = new hospedaje("camping", 120);
+    const camping = new hospedaje("camping", 120);
     camping.verInfo();
 }
 else {

@@ -70,17 +70,28 @@
         <!-- OUR BOOKING FORM MARKUP -->
        <div class="bookings">
             <form class="row gx-2 gy-2 align-items-center">
+              <div class="col-sm-2">
+                <label class="visually-hidden" for="specificSizeInputName">Name</label>
+                <input type="text" class="form-control" id="specificSizeInputName" placeholder="User Name">
+              </div>
+              
+              <div class="col-sm-2">
+                <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+                <select class="form-select" id="specificSizeSelect">
+                  <option selected>guets</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+                
                 <div class="col-sm-2">
-                  <label class="visually-hidden" for="specificSizeInputName">Name</label>
-                  <input type="text" class="form-control" id="specificSizeInputName" placeholder="User Name">
-                </div>
-                <div class="col-sm-2">
-                  <label class="visually-hidden" for="specificSizeSelect">Preference</label>
-                  <select class="form-select" id="specificSizeSelect">
-                    <option selected>guets</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                  <label class="visually-hidden" for="specificSizeSelectRooms">Preference</label>
+                  <select class="form-select" id="specificSizeSelectRooms">
+                    <option selected>rooms</option>
+                    <option value="1">Cabañas</option>
+                    <option value="2">Habitaciones</option>
+                    <option value="3">Camping</option>
                   </select>
                 </div>
     
@@ -92,15 +103,7 @@
                   <label class="visually-hidden" for="specificSizeInputCheckOut">Check Out</label>
                   <input type="date" class="form-control" id="specificSizeInputCheckOut" placeholder="Check Out">
                 </div>
-                <div class="col-sm-2">
-                  <label class="visually-hidden" for="specificSizeSelectRooms">Preference</label>
-                  <select class="form-select" id="specificSizeSelectRooms">
-                    <option selected>rooms</option>
-                    <option value="1">Cabañas</option>
-                    <option value="2">Habitaciones</option>
-                    <option value="3">Camping</option>
-                  </select>
-                </div>
+                
                 <div class="col-auto">
                   <button type="submit" class="btn btn-primary">Reserve</button>
                 </div>
