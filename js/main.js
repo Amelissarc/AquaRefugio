@@ -1,3 +1,4 @@
+
 const tomarReserva = () => {
     let nombre = prompt("Escribe el nombre de quien realizará la reserva")
     let cantidad = prompt ("¿Cuantos huéspedes van a ser?")
@@ -68,6 +69,20 @@ function calendario() {
 }
 calendario();
 
-      
-
 alert('Reserva realizada con éxito') 
+
+
+
+
+
+const obtenerInformacion = (reserva) => {
+    datos= {
+        nombre: ["Melissa", "Juan", "Carolina", "Jaime"],
+        huespedes: [1,2,3,4],
+        tipoHospedaje: ["hotel", "cabaña", "camping"],
+        precio: [250,350,120],
+        fechaIngreso: [10,15,20,25],
+        fechaSalida: [15,17,28,30]
+    }
+}
+
