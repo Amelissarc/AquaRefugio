@@ -412,7 +412,7 @@ section {
       border-radius: 8px;
       border: solid black; } }
 
-.bookings {
+#booking-form {
   margin: 10px 20px;
   padding: 5% 0 2%; }
 

@@ -1,8 +1,10 @@
+// Angie Melissa Rincón Cely - 2da Pre-entrega
+
 
 const tomarReserva = () => {
     let nombre = prompt("Escribe el nombre de quien realizará la reserva")
     let cantidad = prompt ("¿Cuantos huéspedes van a ser?")
-    console.log(`La reserva se guardo con el nombre de ${nombre}; se van a alojar ${cantidad} personas`)
+    console.log(`La reserva se guardo con el nombre de ${nombre}; se van a alojar ${cantidad} personas.`)
 }
 tomarReserva();
 
@@ -71,18 +73,54 @@ calendario();
 
 alert('Reserva realizada con éxito') 
 
-
-
-
-
-const obtenerInformacion = (reserva) => {
-    datos= {
-        nombre: ["Melissa", "Juan", "Carolina", "Jaime"],
-        huespedes: [1,2,3,4],
-        tipoHospedaje: ["hotel", "cabaña", "camping"],
-        precio: [250,350,120],
-        fechaIngreso: [10,15,20,25],
-        fechaSalida: [15,17,28,30]
+//Habitaciones disponibles construyendo 
+let rooms = {
+    cabañas: 10,
+    habitaciones: 5,
+    Camping: 2
+  };
+  
+  $("#booking-form").submit(function(event) {
+    event.preventDefault(); 
+  
+    let roomType = $("#room-type").val();
+    let checkIn = new Date($("#check-in").val());
+    let checkOut = new Date($("#check-out").val());
+  
+    
+    if (checkIn >= checkOut) {
+      alert("La fecha de salida debe ser posterior a la fecha de entrada");
+      return;
     }
-}
 
+    if (rooms[roomType] > 0) {
+    
+      rooms[roomType]--;
+  
+    
+      $("#availability").html("Reserva exitosa, su tipo de habitación es en " + roomType + " Check-in: " + checkIn + " Check-out: " + checkOut);
+    } else {
+      
+      $("#availability").html("Lo sentimos, el tipo de habitación seleccionada no esta disponible durante las fechas seleccionadas, probá con otra.");
+    }
+  });
+  
+
+
+
+  
+/* Construyendo */
+
+// const obtenerInformacion = (reserva) => {
+//     datos= {
+//         nombre: ["Melissa", "Juan", "Carolina", "Jaime"],
+//         huespedes: [1,2,3,4],
+//         tipoHospedaje: ["hotel", "cabaña", "camping"],
+//         precio: [250,350,120],
+//         fechaIngreso: [10,15,20,25],
+//         fechaSalida: [15,17,28,30]
+//     }
+// }
+
+// const mostrarInformacion = obtenerInformacion.filter(reserva);
+// console.log(mostrarInformacion);
