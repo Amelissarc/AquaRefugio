@@ -105,22 +105,15 @@ let rooms = {
     }
   });
   
-
-
-
+  let hotelRooms = [
+    {number: 1, type: 'double', occupied: false},
+    {number: 2, type: 'single', occupied: true},
+    {number: 3, type: 'double', occupied: false},
+    {number: 4, type: 'single', occupied: true},
+    {number: 5, type: 'double', occupied: false}
+  ];
   
-/* Construyendo */
-
-// const obtenerInformacion = (reserva) => {
-//     datos= {
-//         nombre: ["Melissa", "Juan", "Carolina", "Jaime"],
-//         huespedes: [1,2,3,4],
-//         tipoHospedaje: ["hotel", "cabaña", "camping"],
-//         precio: [250,350,120],
-//         fechaIngreso: [10,15,20,25],
-//         fechaSalida: [15,17,28,30]
-//     }
-// }
-
-// const mostrarInformacion = obtenerInformacion.filter(reserva);
-// console.log(mostrarInformacion);
+  let habitacionesDoblesDesocupadas = hotelRooms.filter(room => room.type === 'double' && room.occupied === false);
+  
+  let room2 = hotelRooms.find(room => room.number === 2);
+  
