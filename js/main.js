@@ -36,7 +36,7 @@ const serviciosArray = [
 ];
 
 if (opciones >= 1 && opciones <= 3) {
-    const hospedaje = new Hospedaje(opcionesArray[opciones-1], preciosArray[opciones-1], imagenesArray[opciones-1], descripcionesArray[opciones-1]);
+    const hospedaje = new Hospedaje(opcionesArray[opciones-1], preciosArray[opciones-1], descripcionesArray[opciones-1]);
     localStorage.setItem("hospedaje", opcionesArray[opciones-1]);
     localStorage.setItem("precio", preciosArray[opciones-1]);
     localStorage.setItem("descripcion", descripcionesArray[opciones-1]);
