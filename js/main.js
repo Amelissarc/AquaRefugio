@@ -1,4 +1,5 @@
 // Angie Melissa Rincón Cely - 2da Pre-entreg
+
 const tomarReserva = () => {
     let nombre = prompt("Escribe el nombre de quien realizará la reserva");
     let cantidad = prompt("¿Cuantos huéspedes van a ser?");
@@ -64,10 +65,10 @@ do {
     fechaSalida = prompt("Ingrese fecha de check-out:");
 
     if(!fechaSalida)
-    console.log("Ingrese fecha en formato dia/mes/año");
+    console.log("Ingrese fecha en formato año/mes/día");
 
     if(isNaN(fechaSalida))
-    console.log("Ingrese fecha en formato dia/mes/año");
+    console.log("Ingrese fecha en formato año/mes/día");
 
 } while (isNaN(fechaSalida))
 console.log("la fecha de check-out: " + fechaSalida)
@@ -75,55 +76,42 @@ console.log("la fecha de check-out: " + fechaSalida)
 localStorage.setItem('checkIn', fechaIngreso);
 localStorage.setItem('checkOut', fechaSalida);
 
-let checkIn = localStorage.getItem('checkIn');
-let checkOut = localStorage.getItem('checkOut');
+let rooms = [
+  { type: "cabaña", datesAvailable: ["2022-05-01", "2022-05-02", "2022-05-03"] },
+  { type: "habitacion", datesAvailable: ["2022-05-01", "2022-05-02"] },
+  { type: "camping", datesAvailable: ["2022-05-03"] }
+];
 
-alert('Reserva realizada con éxito') 
-
-let rooms = {
-    cabañas: 10,
-    habitaciones: 5,
-    Camping: 2
-  };
-
-const storedRooms = JSON.parse(localStorage.getItem('rooms')) || rooms;
-
-$("#booking-form").submit(function(event) {
-  event.preventDefault(); 
-
-  let roomType = $("#room-type").val();
-  let checkIn = new Date($("#check-in").val());
-  let checkOut = new Date($("#check-out").val());
-
-  if (checkIn >= checkOut) {
-    alert("La fecha de salida debe ser posterior a la fecha de entrada");
-    return;
+function checkAvailability(selectedType, checkIn, checkOut) {
+  let selectedRoom = rooms.find(room => room.type === selectedType);
+  if (!selectedRoom) {
+    return "Tipo de habitación no disponible";
   }
 
-  if (storedRooms[roomType] > 0) {
-
-    storedRooms[roomType]--;
-
-    $("#availability").html("Reserva exitosa, su tipo de habitación es en " + roomType + " Check-in: " + checkIn + " Check-out: " + checkOut);
-  } else {
-
-    $("#availability").html("Lo sentimos, el tipo de habitación seleccionada no esta disponible durante las fechas seleccionadas, probá con otra.");
+  let availableDates = selectedRoom.datesAvailable;
+  for (let date = checkIn; date < checkOut; date.setDate(date.getDate() + 1)) {
+    let formattedDate = date.toISOString().slice(0, 10);
+    if (!availableDates.includes(formattedDate)) {
+      return "Habitación no disponible en fechas seleccionadas";
+    }
   }
 
-  localStorage.setItem('rooms', JSON.stringify(storedRooms));
+  return "Habitación disponible para reserva";
+}
 
-  let hotelRooms = [
-    {number: 1, type: 'double', occupied: false},
-    {number: 2, type: 'single', occupied: true},
-    {number: 3, type: 'double', occupied: false},
-    {number: 4, type: 'single', occupied: true},
-    {number: 5, type: 'double', occupied: false}
-  ];
+let selectedType = "cabaña";
+let checkIn = new Date("2022-05-01");
+let checkOut = new Date("2022-05-03");
+let availability = checkAvailability(selectedType, checkIn, checkOut);
+console.log(availability);
 
-  let habitacionesDoblesDesocupadas = hotelRooms.filter(room => room.type === 'double' && room.occupied === false);
+let hotelRooms = [
+  {number: 1, type: 'cabaña', occupied: false},
+  {number: 2, type: 'habitacion', occupied: true},
+  {number: 3, type: 'camping', occupied: false},
+  {number: 4, type: 'cabaña', occupied: true},
+  {number: 5, type: 'habitacion', occupied: false}
+];
 
+let unoccupiedDoubleRooms = hotelRooms.filter(room => room.type === 'habitacion' && room.occupied === false);
   let room2 = hotelRooms.find(room => room.number === 2);
-
-});
-  
-  
