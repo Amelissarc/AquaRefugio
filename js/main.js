@@ -7,36 +7,43 @@ const tomarReserva = () => {
     console.log(`La reserva se guardo con el nombre de ${nombre}; se van a alojar ${cantidad} personas.`);
 };
 tomarReserva();
-
-class hospedaje {
-    constructor(tipo, precio) {
+class Hospedaje {
+    constructor(tipo, precio, imagen, descripcion) {
         this.tipo = tipo;
         this.precio = precio;
+        this.imagen = imagen;
+        this.descripcion = descripcion;
         this.info = `El hospedaje seleccionado es en ${this.tipo}, el valor por noche es de $${this.precio}USD`;
     }
     verInfo() {
-        console.log(this.info);
+        console.log(`${this.info}\nImagen: ${this.imagen}\nDescripcion: ${this.descripcion}`);
     }
 }
 
 alert("Selecciona el tipo de hospedaje que deseas");
 let opciones = prompt("1: cabaña, 2: hotel, 3: camping");
 
-if (opciones == 1) {
-    const cabaña = new hospedaje("cabaña", 250);
-    localStorage.setItem("hospedaje", "cabaña");
-    localStorage.setItem("precio", 250);
-    cabaña.verInfo();
-} else if (opciones == 2) {
-    const hotel = new hospedaje("hotel", 350);
-    localStorage.setItem("hospedaje", "hotel");
-    localStorage.setItem("precio", 350);
-    hotel.verInfo();
-} else if (opciones == 3) {
-    const camping = new hospedaje("camping", 120);
-    localStorage.setItem("hospedaje", "camping");
-    localStorage.setItem("precio", 120);
-    camping.verInfo();
+const opcionesArray = ['cabaña', 'hotel', 'camping'];
+const preciosArray = [250, 350, 120];
+const descripcionesArray = [
+    'Cabañas con vistas al río y una amplia terraza para disfrutar', 
+    'Hotel con piscina, spa y desayuno incluido',
+    'Camping con parques y áreas de picnic para disfrutar del aire libre'
+];
+const serviciosArray = [
+    ['Wifi', 'Desayuno'],
+    ['Piscina', 'Spa', 'Restaurante'],
+    ['Parques', 'Áreas de picnic']
+];
+
+if (opciones >= 1 && opciones <= 3) {
+    const hospedaje = new Hospedaje(opcionesArray[opciones-1], preciosArray[opciones-1], imagenesArray[opciones-1], descripcionesArray[opciones-1]);
+    localStorage.setItem("hospedaje", opcionesArray[opciones-1]);
+    localStorage.setItem("precio", preciosArray[opciones-1]);
+    localStorage.setItem("imagen", imagenesArray[opciones-1]);
+    localStorage.setItem("descripcion", descripcionesArray[opciones-1]);
+    localStorage.setItem("servicios", JSON.stringify(serviciosArray[opciones-1]));
+    hospedaje.verInfo();
 } else {
     alert("Por favor seleccione una opción valida");
 }
@@ -75,14 +82,12 @@ let checkOut = localStorage.getItem('checkOut');
 
 alert('Reserva realizada con éxito') 
 
-//Habitaciones disponibles construyendo 
 let rooms = {
     cabañas: 10,
     habitaciones: 5,
     Camping: 2
   };
 
-// Retrieve the stored state of the `rooms` object from local storage (if it exists)
 const storedRooms = JSON.parse(localStorage.getItem('rooms')) || rooms;
 
 $("#booking-form").submit(function(event) {
@@ -107,7 +112,6 @@ $("#booking-form").submit(function(event) {
     $("#availability").html("Lo sentimos, el tipo de habitación seleccionada no esta disponible durante las fechas seleccionadas, probá con otra.");
   }
 
-  // Store the updated state of the `rooms` object in local storage
   localStorage.setItem('rooms', JSON.stringify(storedRooms));
 
   let hotelRooms = [
