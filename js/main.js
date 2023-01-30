@@ -8,15 +8,14 @@ const tomarReserva = () => {
 };
 tomarReserva();
 class Hospedaje {
-    constructor(tipo, precio, imagen, descripcion) {
+    constructor(tipo, precio, descripcion) {
         this.tipo = tipo;
         this.precio = precio;
-        this.imagen = imagen;
         this.descripcion = descripcion;
         this.info = `El hospedaje seleccionado es en ${this.tipo}, el valor por noche es de $${this.precio}USD`;
     }
     verInfo() {
-        console.log(`${this.info}\nImagen: ${this.imagen}\nDescripcion: ${this.descripcion}`);
+        console.log(`${this.info}\nDescripcion: ${this.descripcion}`);
     }
 }
 
@@ -40,7 +39,6 @@ if (opciones >= 1 && opciones <= 3) {
     const hospedaje = new Hospedaje(opcionesArray[opciones-1], preciosArray[opciones-1], imagenesArray[opciones-1], descripcionesArray[opciones-1]);
     localStorage.setItem("hospedaje", opcionesArray[opciones-1]);
     localStorage.setItem("precio", preciosArray[opciones-1]);
-    localStorage.setItem("imagen", imagenesArray[opciones-1]);
     localStorage.setItem("descripcion", descripcionesArray[opciones-1]);
     localStorage.setItem("servicios", JSON.stringify(serviciosArray[opciones-1]));
     hospedaje.verInfo();
