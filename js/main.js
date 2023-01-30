@@ -13,10 +13,10 @@ class Hospedaje {
         this.tipo = tipo;
         this.precio = precio;
         this.descripcion = descripcion;
-        this.info = `El hospedaje seleccionado es en ${this.tipo}, el valor por noche es de $${this.precio}USD`;
+        this.info = `El hospedaje seleccionado es en ${this.tipo}`;
     }
     verInfo() {
-        console.log(`${this.info}\nDescripcion: ${this.descripcion}`);
+        console.log(`${this.info}\nDescripcion:${this.descripcion}\nPrecio:${this.precio}USD`);
     }
 }
 
@@ -52,10 +52,10 @@ do {
     fechaIngreso = prompt("Ingrese fecha de check-in:");
 
     if(!fechaIngreso)
-    console.log("Ingrese fecha en formato dia/mes/año");
+    console.log("Ingrese fecha en formato año/mes/día");
 
     if(isNaN(fechaIngreso))
-    console.log("Ingrese fecha en formato dia/mes/año");
+    console.log("Ingrese fecha en formato año/mes/día");
 
 } while (isNaN(fechaIngreso))
 console.log("La fecha de check-in: " + fechaIngreso);
@@ -95,7 +95,6 @@ function checkAvailability(selectedType, checkIn, checkOut) {
       return "Habitación no disponible en fechas seleccionadas";
     }
   }
-
   return "Habitación disponible para reserva";
 }
 
