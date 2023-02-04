@@ -27,19 +27,21 @@ function BookingOption(option, price, description) {
 
 BookingOption.prototype.showInfo = function() {
   console.log(`Opción: ${this.option}`);
-  console.log(`Precio: ${this.price}`);
+  console.log(`Precio noche: ${this.price}`);
   console.log(`Descripción: ${this.description}`);
 };
 
 const bookingOptionData = {
-  optionArray: ['cabañas', 'habitaciones', 'camping'],
-  priceArray: [250, 350, 120],
+  optionArray: [ '', 'cabañas', 'habitaciones', 'camping'],
+  priceArray: [,250, 350, 120],
   descriptionArray: [
+  '',
   'Cabañas con vista al río y una amplia terraza para disfrutar',
   'Hotel con piscina, spa y desayuno incluido',
   'Camping con parques y merenderos para disfrutar del aire libre'
   ],
   servicesArray: [
+    '',
   ['Wifi', 'Desayuno'],
   ['Piscina', 'Spa', 'Restaurante'],
   ['Parques', 'Áreas de picnic']

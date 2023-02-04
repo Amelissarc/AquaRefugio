@@ -413,13 +413,13 @@ section {
       border: solid black; } }
 
 #booking-form {
-  margin: 10px 20px;
-  padding: 5% 0 2%; }
+  margin: 5px 0;
+  padding: 2% 5%; }
 
 .tipo-alojamiento {
   align-items: center;
   display: flex;
-  justify-content: center; }
+  justify-content: space-evenly; }
   .tipo-alojamiento .card-body a {
     display: block;
     text-align: center;
