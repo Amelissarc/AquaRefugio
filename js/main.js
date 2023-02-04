@@ -130,17 +130,16 @@ let hotelRooms = [
 ];
 
 
+let miFuncion = function(e) {
+  Swal.fire(
+    'Reservado',
+    'Revisa tu correo electronico para confirmar tus datos',
+    'success'
+  );
+}
 
-// let miFuncion = function(e) {
-//   Swal.fire(
-//     'Good job!',
-//     'You clicked the button!',
-//     'success'
-//   );
-// }
-
-// let myBot = document.getElementById("btn btn-primary");
-// myBot.addEventListener("click", miFuncion);
+let myBot = document.getElementById("btnPrimary");
+myBot.addEventListener("click", miFuncion);
 
 
 
