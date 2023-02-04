@@ -129,16 +129,18 @@ let hotelRooms = [
   {number: 5, type: 'habitaciones', occupied: false}
 ];
 
-let myBot = document.getElementById("btn-primary");
-myBot.addEventListener("click", miFuncion);
 
-let miFuncion = function(){
-  Swal.fire(
-    'Good job!',
-    'You clicked the button!',
-    'success'
-  )
-}
+
+// let miFuncion = function(e) {
+//   Swal.fire(
+//     'Good job!',
+//     'You clicked the button!',
+//     'success'
+//   );
+// }
+
+// let myBot = document.getElementById("btn btn-primary");
+// myBot.addEventListener("click", miFuncion);
 
 
 
