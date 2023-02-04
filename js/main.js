@@ -1,84 +1,98 @@
-// Angie Melissa Rincón Cely - 2da Pre-entreg
+// Angie Melissa Rincón Cely - 3da Pre-entrega
 
-const tomarReserva = () => {
-    let nombre = prompt("Escribe el nombre de quien realizará la reserva");
-    let cantidad = prompt("¿Cuantos huéspedes van a ser?");
-    localStorage.setItem("nombre", nombre);
-    localStorage.setItem("cantidad", cantidad);
-    console.log(`La reserva se guardo con el nombre de ${nombre}; se van a alojar ${cantidad} personas.`);
+// Definiendo el elemento de formulario y las entradas 
+const form = document.querySelector('#booking-form form');
+const specificSizeInputName = document.querySelector('#specificSizeInputName');
+const specificSizeSelect = document.querySelector('#specificSizeSelect');
+const roomTypeSelect = document.querySelector('#room-type');
+const bookingOption = document.querySelector(`input[name="bookingOption"]`);
+
+// Detector de eventos de envío al formulario
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+   
+  // Valores de las entradas para guardar en el localStorage
+  let name = specificSizeInputName.value;
+  let amount = specificSizeSelect.value;
+  localStorage.setItem("name", name);
+  localStorage.setItem("amount", amount);
+  console.log(`La reserva se guardó con el nombre de ${name}; ${amount} personas se quedarán.`);
+});
+
+function BookingOption(option, price, description) {
+  this.option = option;
+  this.price = price;
+  this.description = description;
+}
+
+BookingOption.prototype.showInfo = function() {
+  console.log(`Opción: ${this.option}`);
+  console.log(`Precio: ${this.price}`);
+  console.log(`Descripción: ${this.description}`);
 };
-tomarReserva();
-class Hospedaje {
-    constructor(tipo, precio, descripcion) {
-        this.tipo = tipo;
-        this.precio = precio;
-        this.descripcion = descripcion;
-        this.info = `El hospedaje seleccionado es en ${this.tipo}`;
-    }
-    verInfo() {
-        console.log(`${this.info}\nDescripcion:${this.descripcion}\nPrecio:${this.precio}USD`);
-    }
-}
 
-alert("Selecciona el tipo de hospedaje que deseas");
-let opciones = prompt("1: cabaña, 2: hotel, 3: camping");
+const bookingOptionData = {
+  optionArray: ['cabañas', 'habitaciones', 'camping'],
+  priceArray: [250, 350, 120],
+  descriptionArray: [
+  'Cabañas con vista al río y una amplia terraza para disfrutar',
+  'Hotel con piscina, spa y desayuno incluido',
+  'Camping con parques y merenderos para disfrutar del aire libre'
+  ],
+  servicesArray: [
+  ['Wifi', 'Desayuno'],
+  ['Piscina', 'Spa', 'Restaurante'],
+  ['Parques', 'Áreas de picnic']
+  ]
+};
 
-const opcionesArray = ['cabaña', 'hotel', 'camping'];
-const preciosArray = [250, 350, 120];
-const descripcionesArray = [
-    'Cabañas con vistas al río y una amplia terraza para disfrutar', 
-    'Hotel con piscina, spa y desayuno incluido',
-    'Camping con parques y áreas de picnic para disfrutar del aire libre'
-];
-const serviciosArray = [
-    ['Wifi', 'Desayuno'],
-    ['Piscina', 'Spa', 'Restaurante'],
-    ['Parques', 'Áreas de picnic']
-];
+let bookingOptionArray = [];
 
-if (opciones >= 1 && opciones <= 3) {
-    const hospedaje = new Hospedaje(opcionesArray[opciones-1], preciosArray[opciones-1], descripcionesArray[opciones-1]);
-    localStorage.setItem("hospedaje", opcionesArray[opciones-1]);
-    localStorage.setItem("precio", preciosArray[opciones-1]);
-    localStorage.setItem("descripcion", descripcionesArray[opciones-1]);
-    localStorage.setItem("servicios", JSON.stringify(serviciosArray[opciones-1]));
-    hospedaje.verInfo();
+document.addEventListener('DOMContentLoaded', function () {
+  const roomTypeSelect = document.getElementById('room-type');
+  
+  if (roomTypeSelect) {
+    roomTypeSelect.addEventListener('change', (e) => {
+      const selectedIndex = roomTypeSelect.selectedIndex;
+      const bookingOption = new BookingOption(
+          bookingOptionData.optionArray[selectedIndex],
+          bookingOptionData.priceArray[selectedIndex],
+          bookingOptionData.descriptionArray[selectedIndex]
+      );
+      bookingOptionArray.push(bookingOption);
+      localStorage.setItem("bookingOptionArray", JSON.stringify(bookingOptionArray));
+      bookingOption.showInfo();
+    });
+  }
+});
+// Fechas de entrada y salida
+const checkInInput = document.querySelector(`input[name="checkIn"]`);
+const checkOutInput = document.querySelector(`input[name="checkOut"]`);
+
+// Check-in 
+if (!checkInInput) {
+} else if (!checkInInput.value || isNaN(Date.parse(checkInInput.value))) {
+  console.log(`Seleccione una fecha de entrada válida`);
 } else {
-    alert("Por favor seleccione una opción valida");
+  const checkInDate = checkInInput.value;
+  console.log(`Fecha de ingreso: ${checkInDate}`);
+  localStorage.setItem("checkIn", checkInDate);
 }
 
-let fechaIngreso;
-do {
-    fechaIngreso = prompt("Ingrese fecha de check-in:");
+// Check-out
+if (!checkOutInput) {
+} else if (!checkOutInput.value || isNaN(Date.parse(checkOutInput.value))) {
+  console.log(`Seleccione una fecha de entrada válida`);
+} else {
+  const checkOutDate = checkOutInput.value;
+  console.log(`Fecha de salida: ${checkOutDate}`);
+  localStorage.setItem("checkOut", checkOutDate);
+}
 
-    if(!fechaIngreso)
-    console.log("Ingrese fecha en formato año/mes/día");
-
-    if(isNaN(fechaIngreso))
-    console.log("Ingrese fecha en formato año/mes/día");
-
-} while (isNaN(fechaIngreso))
-console.log("La fecha de check-in: " + fechaIngreso);
-
-let fechaSalida;
-do {
-    fechaSalida = prompt("Ingrese fecha de check-out:");
-
-    if(!fechaSalida)
-    console.log("Ingrese fecha en formato año/mes/día");
-
-    if(isNaN(fechaSalida))
-    console.log("Ingrese fecha en formato año/mes/día");
-
-} while (isNaN(fechaSalida))
-console.log("la fecha de check-out: " + fechaSalida)
-
-localStorage.setItem('checkIn', fechaIngreso);
-localStorage.setItem('checkOut', fechaSalida);
-
+// Disponibilidad de cuarto
 let rooms = [
-  { type: "cabaña", datesAvailable: ["2022-05-01", "2022-05-02", "2022-05-03"] },
-  { type: "habitacion", datesAvailable: ["2022-05-01", "2022-05-02"] },
+  { type: "cabañas", datesAvailable: ["2022-05-01", "2022-05-02", "2022-05-03"] },
+  { type: "habitaciones", datesAvailable: ["2022-05-01", "2022-05-02"] },
   { type: "camping", datesAvailable: ["2022-05-03"] }
 ];
 
@@ -89,28 +103,30 @@ function checkAvailability(selectedType, checkIn, checkOut) {
   }
 
   let availableDates = selectedRoom.datesAvailable;
-  for (let date = checkIn; date < checkOut; date.setDate(date.getDate() + 1)) {
+  for (let date = new Date(checkIn); date < new Date(checkOut); date.setDate(date.getDate() + 1)) {
     let formattedDate = date.toISOString().slice(0, 10);
     if (!availableDates.includes(formattedDate)) {
       return "Habitación no disponible en fechas seleccionadas";
     }
   }
-  return "Habitación disponible para reserva";
+  return "Habitación disponible para reservar";
 }
 
-let selectedType = "cabaña";
-let checkIn = new Date("2022-05-01");
-let checkOut = new Date("2022-05-03");
+let selectedType = "cabañas";
+let checkIn = "2022-05-01";
+let checkOut = "2022-05-03";
 let availability = checkAvailability(selectedType, checkIn, checkOut);
 console.log(availability);
 
+// Habitaciones de hotel y estado de ocupación
 let hotelRooms = [
-  {number: 1, type: 'cabaña', occupied: false},
-  {number: 2, type: 'habitacion', occupied: true},
+  {number: 1, type: 'cabañas', occupied: false},
+  {number: 2, type: 'habitaciones', occupied: true},
   {number: 3, type: 'camping', occupied: false},
-  {number: 4, type: 'cabaña', occupied: true},
-  {number: 5, type: 'habitacion', occupied: false}
+  {number: 4, type: 'cabañas', occupied: true},
+  {number: 5, type: 'habitaciones', occupied: false}
 ];
 
-let unoccupiedDoubleRooms = hotelRooms.filter(room => room.type === 'habitacion' && room.occupied === false);
-  let room2 = hotelRooms.find(room => room.number === 2);
+
+
+
