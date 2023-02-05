@@ -1,3 +1,13 @@
+section {
+    .alojamiento {
+        margin-top: 0%;
+    }
+    div.col {
+        margin-top: 0%;
+        margin-bottom: 10%;
+    }
+}
+
 #booking-form {
     margin: 5px 0;
     padding: 2% 5%;
@@ -6,12 +16,26 @@
     align-items: center;
     display: flex;
     justify-content:space-evenly;
-    .card-body a {
+    width: 100%;
+    height: auto;
+    .card a {
         display: block;
         text-align: center;
         text-decoration: none;
-        color: $primary_color;
+        color: whitesmoke;
+        font-size: 24px;
+        margin: -90px 0px;
+        z-index: 1;
     }
+    .card-img{
+        opacity: 0.8;
+        filter: alpha(opacity=80);
+        zoom: 1;
+}
+
+.card:hover a {
+    font-size: 30px
+}
 }
 .row {
     --bs-gutter-x: 1.5rem;
@@ -22,6 +46,7 @@
     margin-right: calc(-.5 * var(--bs-gutter-x));
     margin-left: calc(-.5 * var(--bs-gutter-x));
     justify-content:space-evenly;
+    
 }
 
 .title-hospedaje {

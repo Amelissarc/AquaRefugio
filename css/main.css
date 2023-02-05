@@ -412,6 +412,13 @@ section {
       border-radius: 8px;
       border: solid black; } }
 
+section .alojamiento {
+  margin-top: 0%; }
+
+section div.col {
+  margin-top: 0%;
+  margin-bottom: 10%; }
+
 #booking-form {
   margin: 5px 0;
   padding: 2% 5%; }
@@ -419,12 +426,23 @@ section {
 .tipo-alojamiento {
   align-items: center;
   display: flex;
-  justify-content: space-evenly; }
-  .tipo-alojamiento .card-body a {
+  justify-content: space-evenly;
+  width: 100%;
+  height: auto; }
+  .tipo-alojamiento .card a {
     display: block;
     text-align: center;
     text-decoration: none;
-    color: #000000; }
+    color: whitesmoke;
+    font-size: 24px;
+    margin: -90px 0px;
+    z-index: 1; }
+  .tipo-alojamiento .card-img {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    zoom: 1; }
+  .tipo-alojamiento .card:hover a {
+    font-size: 30px; }
 
 .row {
   --bs-gutter-x: 1.5rem;
