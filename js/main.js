@@ -17,6 +17,14 @@ form.addEventListener('submit', (e) => {
   localStorage.setItem("name", name);
   localStorage.setItem("amount", amount);
   console.log(`La reserva se guardó con el nombre de ${name}; ${amount} personas se quedarán.`);
+
+  Swal.fire(
+    'Reservado',
+    'Revisa tu correo electronico para confirmar tus datos',
+    'success'
+  );
+  let formulario = document.getElementById("bookingReset")
+   formulario.reset() // esto  resetea el formulario.
 });
 
 function BookingOption(option, price, description) {
@@ -128,19 +136,5 @@ let hotelRooms = [
   {number: 4, type: 'cabañas', occupied: true},
   {number: 5, type: 'habitaciones', occupied: false}
 ];
-
-
-let miFuncion = function(e) {
-  Swal.fire(
-    'Reservado',
-    'Revisa tu correo electronico para confirmar tus datos',
-    'success'
-  );
-  let formulario = document.getElementById("bookingReset")
-   formulario.reset() // esto resetea el formulario.
-}
-
-let myBot = document.getElementById("btnPrimary");
-myBot.addEventListener("click", miFuncion);
 
 
