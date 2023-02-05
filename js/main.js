@@ -136,11 +136,11 @@ let miFuncion = function(e) {
     'Revisa tu correo electronico para confirmar tus datos',
     'success'
   );
+  let formulario = document.getElementById("bookingReset")
+   formulario.reset() // esto resetea el formulario.
 }
 
 let myBot = document.getElementById("btnPrimary");
 myBot.addEventListener("click", miFuncion);
 
 
-
- 

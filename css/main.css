@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* SCSS HEX */
 * {
   margin: 0%;
   padding: 0%; }
@@ -437,10 +438,6 @@ section div.col {
     font-size: 24px;
     margin: -90px 0px;
     z-index: 1; }
-  .tipo-alojamiento .card-img {
-    opacity: 0.8;
-    filter: alpha(opacity=80);
-    zoom: 1; }
   .tipo-alojamiento .card:hover a {
     font-size: 30px; }
 
@@ -562,6 +559,9 @@ section div.col {
   width: 100%;
   margin-top: 20px; }
 
+main.restaurant {
+  margin-top: 5%; }
+
 .title-restaurant {
   align-items: center;
   text-align: center;
@@ -589,6 +589,9 @@ section div.col {
   line-height: 3;
   text-align: center;
   font-size: 24px; }
+
+.col .rest {
+  margin-bottom: 0%; }
 
 .carnes {
   display: flex;
