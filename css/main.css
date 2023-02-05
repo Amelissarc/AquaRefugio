@@ -438,6 +438,16 @@ section div.col {
     font-size: 24px;
     margin: -90px 0px;
     z-index: 1; }
+  .tipo-alojamiento .tipo-alojamiento .card a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 24px;
+    margin: -90px 0px;
+    z-index: 1; }
+  .tipo-alojamiento .tipo-alojamiento .card:hover a {
+    font-size: 30px; }
   .tipo-alojamiento .card:hover a {
     font-size: 30px; }
 
