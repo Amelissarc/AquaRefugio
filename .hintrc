@@ -10,6 +10,15 @@
       {
         "link-name": "off"
       }
+    ],
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "iframe[allow]",
+          "iframe[loading]"
+        ]
+      }
     ]
   },
   "browserslist": [
