@@ -97,23 +97,22 @@ class BookingOption {
   }
 }
 
-// let bookingOptionArray = [];
+let bookingOptionArray = [];
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   const roomTypeSelect = document.getElementById('room-type');
+document.addEventListener('DOMContentLoaded', function () {
+  const roomTypeSelect = document.getElementById('room-type');
   
-//   if (roomTypeSelect) {
-//     roomTypeSelect.addEventListener('change', (e) => {
-//       const selectedIndex = e.target.selectedIndex;
-//       const selectedOption = e.target.options[selectedIndex];
-//       const bookingOption = new BookingOption(selectedOption);
-//       bookingOptionArray.push(bookingOption);
-//       localStorage.setItem("bookingOptionArray", JSON.stringify(bookingOptionArray));
-//       bookingOption.showInfo();
-//     });
-//   }
-// });
-
+  if (roomTypeSelect) {
+    roomTypeSelect.addEventListener('change', (e) => {
+      const selectedIndex = e.target.selectedIndex;
+      const selectedOption = e.target.options[selectedIndex];
+      const bookingOption = new BookingOption(selectedOption);
+      bookingOptionArray.push(bookingOption);
+      localStorage.setItem("bookingOptionArray", JSON.stringify(bookingOptionArray));
+      bookingOption.showInfo();
+    });
+  }
+});
 
 // Para Cargar opciones de reserva desde un archivo JSON
 fetch('../js/Booking-options.json')
