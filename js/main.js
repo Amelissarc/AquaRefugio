@@ -65,6 +65,26 @@ console.log(`Huespedes: ${guests}`);
 console.log(`Check-in: ${checkInValue}`);
 console.log(`Check-out: ${checkOutValue}`);
 
+// Check-in 
+if (!checkIn) {
+} else if (!checkIn.value || isNaN(Date.parse(checkIn.value))) {
+  console.log(`Seleccione una fecha de entrada válida`);
+} else {
+  const checkInDate = checkIn.value;
+  console.log(`Fecha de ingreso: ${checkInDate}`);
+  localStorage.setItem("checkIn", checkInDate);
+}
+
+// Check-out
+if (!checkOut) {
+} else if (!checkOut.value || isNaN(Date.parse(checkOut.value))) {
+  console.log(`Seleccione una fecha de entrada válida`);
+} else {
+  const checkOutDate = checkOutInput.value;
+  console.log(`Fecha de salida: ${checkOutDate}`);
+  localStorage.setItem("checkOut", checkOutDate);
+}
+
 class BookingOption {
   constructor(option) {
     this.name = option.name;
@@ -88,9 +108,9 @@ document.addEventListener('DOMContentLoaded', function () {
     roomTypeSelect.addEventListener('change', (e) => {
       const selectedIndex = roomTypeSelect.selectedIndex;
       const bookingOption = new BookingOption(
-          bookingOptionData.optionArray[selectedIndex],
-          bookingOptionData.priceArray[selectedIndex],
-          bookingOptionData.descriptionArray[selectedIndex]
+          bookingOptionData.option[selectedIndex],
+          bookingOptionData.price[selectedIndex],
+          bookingOptionData.description[selectedIndex]
       );
       bookingOptionArray.push(bookingOption);
       localStorage.setItem("bookingOptionArray", JSON.stringify(bookingOptionArray));
