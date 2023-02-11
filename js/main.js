@@ -130,3 +130,11 @@ fetch('../js/Booking-options.json')
   .catch(error => {
     console.error(error);
   });
+
+  fetch('../js/Booking-options.json')
+  .then(response => response.json())
+  .then(data => {
+    const bookingOptions = data;
+    localStorage.setItem('bookingOptions', JSON.stringify(bookingOptions));
+  })
+  .catch(error => console.error(error));
