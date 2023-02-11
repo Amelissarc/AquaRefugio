@@ -81,6 +81,24 @@ class BookingOption {
   }
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+  const roomTypeSelect = document.getElementById('room-type');
+  
+  if (roomTypeSelect) {
+    roomTypeSelect.addEventListener('change', (e) => {
+      const selectedIndex = roomTypeSelect.selectedIndex;
+      const bookingOption = new BookingOption(
+          bookingOptionData.optionArray[selectedIndex],
+          bookingOptionData.priceArray[selectedIndex],
+          bookingOptionData.descriptionArray[selectedIndex]
+      );
+      bookingOptionArray.push(bookingOption);
+      localStorage.setItem("bookingOptionArray", JSON.stringify(bookingOptionArray));
+      bookingOption.showInfo();
+    });
+  }
+});
+
 // Para Cargar opciones de reserva desde un archivo JSON
 fetch('../js/Booking-options.json')
   .then(response => {
