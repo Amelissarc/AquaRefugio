@@ -97,15 +97,13 @@ class BookingOption {
   }
 }
 
-let bookingOptionData = [];
+let bookingOptionArray = [];
 
 document.addEventListener('DOMContentLoaded', function () {
   const roomTypeSelect = document.getElementById('room-type');
   
   if (roomTypeSelect) {
     roomTypeSelect.addEventListener('change', (e) => {
-      const selectedIndex = roomTypeSelect.selectedIndex;
-      const selectedOption = bookingOptionData.options[selectedIndex];
       const bookingOption = new BookingOption(selectedOption);
       bookingOptionArray.push(bookingOption);
       localStorage.setItem("bookingOptionArray", JSON.stringify(bookingOptionArray));
