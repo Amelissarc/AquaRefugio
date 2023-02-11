@@ -1,0 +1,20 @@
+Este código es un código JavaScript para el manejo de formularios de reserva. Hace lo siguiente:
+
+1.Define elementos del formulario y entradas utilizando el método para seleccionar los elementos.document.querySelector()
+
+2.Tiene una función para guardar los datos del formulario en el almacenamiento local utilizando el método.saveData()localStorage.setItem()
+
+3.Tiene una función para validar los datos del formulario. 
+Comprueba si los valores de la fecha de entrada y salida no están vacíos y son fechas válidas mediante el método. 
+Si se produce un error en la validación, se muestra un mensaje de error en la consola.validateForm()Date.parse()
+
+4.Escucha el evento de envío del formulario y llama a la función. 
+Si el formulario es válido, guarda los datos del formulario en el almacenamiento local y
+muestra un mensaje de éxito mediante el método.validateForm()Swal.fire()
+
+5.Recupera los datos almacenados en el almacenamiento local mediante el método y registra los datos en la consola.localStorage.getItem()
+
+6.Tiene una clase que representa una opción de reserva y tiene métodos para mostrar la información de la opción.BookingOption
+
+7.Obtiene los datos de un archivo JSON utilizando el método y crea instancias de la clase para cada opción. 
+A continuación, las instancias se utilizan para mostrar la información de las opciones en la consola.fetch()BookingOption
