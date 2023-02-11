@@ -15,16 +15,17 @@ function saveData() {
   localStorage.setItem("guests", guestsSelect.value);
   localStorage.setItem("checkIn", checkIn.value);
   localStorage.setItem("checkOut", checkOut.value);
+  localStorage.setItem("roomType", roomType.value);
 }
 
 // Función para validar datos de formulario
 function validateForm() {
   if (!checkIn.value || isNaN(Date.parse(checkIn.value))) {
-    console.error("Seleccione una fecha de check-in válida");
+    // console.error("Seleccione una fecha de check-in válida");
     return false;
   }
   if (!checkOut.value || isNaN(Date.parse(checkOut.value))) {
-    console.error("Por favor, seleccione una fecha de salida válida");
+    // console.error("Por favor, seleccione una fecha de salida válida");
     return false;
   }
   return true;
@@ -59,29 +60,23 @@ const guests = localStorage.getItem("guests");
 const checkInValue = localStorage.getItem("checkIn");
 const checkOutValue = localStorage.getItem("checkOut");
 
-console.log("Datos almacenados en almacenamiento local:");
-console.log(`Nombre: ${name}`);
-console.log(`Huespedes: ${guests}`);
-console.log(`Check-in: ${checkInValue}`);
-console.log(`Check-out: ${checkOutValue}`);
-
 // Check-in 
 if (!checkIn) {
 } else if (!checkIn.value || isNaN(Date.parse(checkIn.value))) {
-  console.log(`Seleccione una fecha de entrada válida`);
+  // console.log(`Seleccione una fecha de entrada válida`);
 } else {
   const checkInDate = checkIn.value;
-  console.log(`Fecha de ingreso: ${checkInDate}`);
+  // console.log(`Fecha de ingreso: ${checkInDate}`);
   localStorage.setItem("checkIn", checkInDate);
 }
 
 // Check-out
 if (!checkOut) {
 } else if (!checkOut.value || isNaN(Date.parse(checkOut.value))) {
-  console.log(`Seleccione una fecha de entrada válida`);
+  // console.log(`Seleccione una fecha de entrada válida`);
 } else {
   const checkOutDate = checkOutInput.value;
-  console.log(`Fecha de salida: ${checkOutDate}`);
+  // console.log(`Fecha de salida: ${checkOutDate}`);
   localStorage.setItem("checkOut", checkOutDate);
 }
 
@@ -92,14 +87,17 @@ class BookingOption {
     this.description = option.description;
     this.services = option.services;
   }
-  
   showInfo() {
-    console.log(`Option: ${this.name}`);
-    console.log(`Price: $${this.price}`);
-    console.log(`Description: ${this.description}`);
-    console.log(`Services: ${this.services.join(', ')}`);
+    console.log(`
+      name: ${this.name}
+      Price: ${this.price}
+      Description: ${this.description}
+      Services: ${this.services.join(', ')}
+    `);
   }
 }
+
+let bookingOptionData = [];
 
 document.addEventListener('DOMContentLoaded', function () {
   const roomTypeSelect = document.getElementById('room-type');
@@ -107,11 +105,8 @@ document.addEventListener('DOMContentLoaded', function () {
   if (roomTypeSelect) {
     roomTypeSelect.addEventListener('change', (e) => {
       const selectedIndex = roomTypeSelect.selectedIndex;
-      const bookingOption = new BookingOption(
-          bookingOptionData.option[selectedIndex],
-          bookingOptionData.price[selectedIndex],
-          bookingOptionData.description[selectedIndex]
-      );
+      const selectedOption = bookingOptionData.options[selectedIndex];
+      const bookingOption = new BookingOption(selectedOption);
       bookingOptionArray.push(bookingOption);
       localStorage.setItem("bookingOptionArray", JSON.stringify(bookingOptionArray));
       bookingOption.showInfo();
