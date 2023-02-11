@@ -85,14 +85,14 @@ class BookingOption {
     this.name = option.name;
     this.price = option.price;
     this.description = option.description;
-    this.services = option.services;
+    this.services = option.services || [];
   }
   showInfo() {
     console.log(`
       name: ${this.name}
       Price: ${this.price}
       Description: ${this.description}
-      Services: ${this.services.join(', ')}
+      Services: ${this.services}
     `);
   }
 }
@@ -104,6 +104,8 @@ document.addEventListener('DOMContentLoaded', function () {
   
   if (roomTypeSelect) {
     roomTypeSelect.addEventListener('change', (e) => {
+      const selectedIndex = e.target.selectedIndex;
+      const selectedOption = e.target.options[selectedIndex];
       const bookingOption = new BookingOption(selectedOption);
       bookingOptionArray.push(bookingOption);
       localStorage.setItem("bookingOptionArray", JSON.stringify(bookingOptionArray));
@@ -111,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
 
 // Para Cargar opciones de reserva desde un archivo JSON
 fetch('../js/Booking-options.json')
@@ -121,20 +124,9 @@ fetch('../js/Booking-options.json')
     return response.json();
   })
   .then(data => {
-    const options = data.options;
-    options.forEach(option => {
-      const bookingOption = new BookingOption(option);
-      bookingOption.showInfo();
-    });
+    bookingOptions = data.options;
+    localStorage.setItem('bookingOptions', JSON.stringify(bookingOptions));
   })
   .catch(error => {
     console.error(error);
   });
-
-  fetch('../js/Booking-options.json')
-  .then(response => response.json())
-  .then(data => {
-    const bookingOptions = data;
-    localStorage.setItem('bookingOptions', JSON.stringify(bookingOptions));
-  })
-  .catch(error => console.error(error));
