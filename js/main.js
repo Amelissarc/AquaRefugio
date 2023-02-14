@@ -129,3 +129,40 @@ fetch('../js/Booking-options.json')
   .catch(error => {
     console.error(error);
   });
+
+
+// Disponibilidad de cuarto
+let rooms = [
+  { type: "cabañas", datesAvailable: ["2022-05-01", "2022-05-02", "2022-05-03"] },
+  { type: "habitaciones", datesAvailable: ["2022-05-01", "2022-05-02"] },
+  { type: "camping", datesAvailable: ["2022-05-03"] }
+];
+
+function checkAvailability(selectedType, checkIn, checkOut) {
+  let selectedRoom = rooms.find(room => room.type === selectedType);
+  if (!selectedRoom) {
+    return "Tipo de habitación no disponible";
+  }
+
+  let availableDates = selectedRoom.datesAvailable;
+  for (let date = new Date(checkIn); date < new Date(checkOut); date.setDate(date.getDate() + 1)) {
+    let formattedDate = date.toISOString().slice(0, 10);
+    if (!availableDates.includes(formattedDate)) {
+      return "Habitación no disponible en fechas seleccionadas";
+    }
+  }
+  return "Habitación disponible para reservar";
+}
+
+let selectedType = "cabañas";
+let availability = checkAvailability(selectedType, checkIn, checkOut);
+console.log(availability);
+
+// Habitaciones de hotel y estado de ocupación
+let hotelRooms = [
+  {number: 1, type: 'cabañas', occupied: false},
+  {number: 2, type: 'habitaciones', occupied: true},
+  {number: 3, type: 'camping', occupied: false},
+  {number: 4, type: 'cabañas', occupied: true},
+  {number: 5, type: 'habitaciones', occupied: false}
+];
