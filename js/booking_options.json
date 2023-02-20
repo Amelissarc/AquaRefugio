@@ -1,35 +1,36 @@
 {
     "options": [
-    {
+      {
+        "id": 1,
         "name": "cabañas",
         "price": 250,
         "description": "Cabañas con vista al río y una amplia terraza para disfrutar",
-        "services": [ 
-            "Wifi", 
-            "Desayuno" 
+        "services": [
+          "Wifi",
+          "Desayuno"
         ]
-    },
-
-    {
+      },
+      {
+        "id": 2,
         "name": "habitaciones",
         "price": 350,
         "description": "Hotel con piscina, spa y desayuno incluido",
-        "services": [ 
-            "Piscina", 
-            "Spa", 
-            "Restaurante" 
+        "services": [
+          "Piscina",
+          "Spa",
+          "Restaurante"
         ]
-    },
-
-    {
+      },
+      {
+        "id": 3,
         "name": "camping",
         "price": 120,
         "description": "Camping con parques y merenderos para disfrutar del aire libre",
-        "services": [ 
-            "Parques", 
-            "Áreas de picnic" 
+        "services": [
+          "Parques",
+          "Áreas de picnic"
         ]
-    }
-  ]
-}
-   
+      }
+    ]
+  }
+  

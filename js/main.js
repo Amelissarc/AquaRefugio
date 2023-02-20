@@ -104,9 +104,11 @@ document.addEventListener('DOMContentLoaded', function () {
   
   if (roomTypeSelect) {
     roomTypeSelect.addEventListener('change', (e) => {
+      
       const selectedIndex = e.target.selectedIndex;
       const selectedOption = e.target.options[selectedIndex];
       const bookingOption = new BookingOption(selectedOption);
+
       bookingOptionArray.push(bookingOption);
       localStorage.setItem("bookingOptionArray", JSON.stringify(bookingOptionArray));
       bookingOption.showInfo();
@@ -115,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Para Cargar opciones de reserva desde un archivo JSON
-fetch('../js/Booking-options.json')
+fetch('../js/booking_options.json')
   .then(response => {
     if (!response.ok) {
       throw new Error(`Error al obtener opciones. Código de estado HTTP: ${response.status}`);
@@ -166,3 +168,21 @@ let hotelRooms = [
   {number: 4, type: 'cabañas', occupied: true},
   {number: 5, type: 'habitaciones', occupied: false}
 ];
+
+// API absctapi calendario
+function httpGetAsync(url, callback) {
+  let xmlHttp = new XMLHttpRequest();
+  xmlHttp.onreadystatechange = function() {
+      if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
+      callback(xmlHttp.responseText);
+  }
+  xmlHttp.open("GET", url, true); // true para asincrónico
+  xmlHttp.send(null);
+}
+
+let url = "https://holidays.abstractapi.com/v1/?api_key=4f17bac92a1e432684664d7764046f43&country=AR&year=2023&month=02&day=21"
+
+httpGetAsync(url, function(response) {
+  console.log(response);
+});
+
