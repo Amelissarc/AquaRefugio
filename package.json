@@ -206,5 +206,6 @@
     "yargs-parser": "^20.2.9",
     "wrappy": "^1.0.2"
   },
+  "keywords": [],
   "description": ""
 }

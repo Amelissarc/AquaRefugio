@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
   if (roomTypeSelect) {
     roomTypeSelect.addEventListener('change', (e) => {
-      
+
       const selectedIndex = e.target.selectedIndex;
       const selectedOption = e.target.options[selectedIndex];
       const bookingOption = new BookingOption(selectedOption);
@@ -131,7 +131,6 @@ fetch('../js/booking_options.json')
   .catch(error => {
     console.error(error);
   });
-
 
 // Disponibilidad de cuarto
 let rooms = [

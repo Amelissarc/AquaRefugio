@@ -274,7 +274,8 @@ section {
         overflow: hidden; }
   .carnesalcarbon {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    /* Booking */ }
     .carnesalcarbon .carnes {
       display: flex;
       align-items: center;
@@ -295,6 +296,15 @@ section {
         vertical-align: middle;
         width: 420px;
         overflow: hidden; }
+    .carnesalcarbon .card img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between; }
+    .carnesalcarbon .booking-form .form {
+      margin-top: 30%; }
+      .carnesalcarbon .booking-form .form form.align-items-center {
+        align-items: center !important; }
   .bebidas {
     display: flex;
     flex-direction: column;
@@ -413,8 +423,13 @@ section {
       border-radius: 8px;
       border: solid black; } }
 
+main.hospedaje {
+  height: 500px;
+  display: block; }
+
 section .alojamiento {
-  margin-top: 0%; }
+  margin-top: 0%;
+  padding-bottom: 20%; }
 
 section div.col {
   margin-top: 0%;
@@ -449,7 +464,7 @@ section div.col {
   .tipo-alojamiento .tipo-alojamiento .card:hover a {
     font-size: 30px; }
   .tipo-alojamiento .card:hover a {
-    font-size: 30px; }
+    font-size: 25px; }
 
 .row {
   --bs-gutter-x: 1.5rem;
