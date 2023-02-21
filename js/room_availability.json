@@ -1,0 +1,32 @@
+{
+    "rooms": [
+      {
+        "number": 1,
+        "type": "cabañas",
+        "datesAvailable": [
+          "2022-03-01",
+          "2022-03-02",
+          "2022-03-03"
+        ],
+        "roomsAvailable": false
+      },
+      {
+        "number": 2,
+        "type": "habitaciones",
+        "datesAvailable": [
+          "2022-04-01",
+          "2022-04-02"
+        ],
+        "roomsAvailable" :true  
+      },
+      {
+        "number": 3,
+        "type": "camping",
+        "datesAvailable": [
+          "2022-04-03"
+        ],
+        "roomsAvailable": false
+      }
+    ]
+  }
+  
