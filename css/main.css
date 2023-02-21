@@ -423,49 +423,7 @@ section {
       border-radius: 8px;
       border: solid black; } }
 
-main.hospedaje {
-  height: 600px;
-  display: block; }
-
-section .alojamiento {
-  margin-top: 0%;
-  padding-bottom: 20%; }
-
-section div.col {
-  margin-top: 0%;
-  margin-bottom: 10%; }
-
-#booking-form {
-  margin: 5px 0;
-  padding: 2% 5%; }
-
-.tipo-alojamiento {
-  align-items: center;
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  height: auto; }
-  .tipo-alojamiento .card a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: whitesmoke;
-    font-size: 24px;
-    margin: -90px 0px;
-    z-index: 1; }
-  .tipo-alojamiento .tipo-alojamiento .card a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: whitesmoke;
-    font-size: 24px;
-    margin: -90px 0px;
-    z-index: 1; }
-  .tipo-alojamiento .tipo-alojamiento .card:hover a {
-    font-size: 30px; }
-  .tipo-alojamiento .card:hover a {
-    font-size: 25px; }
-
+/* Hospedaje */
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -474,19 +432,32 @@ section div.col {
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-.5 * var(--bs-gutter-x));
   margin-left: calc(-.5 * var(--bs-gutter-x));
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  margin-bottom: 10px; }
 
-.title-hospedaje {
-  text-align: center;
+.tipo-alojamiento {
   margin-bottom: 5%; }
 
+.card-title-hospedaje {
+  text-align: center;
+  text-decoration: none;
+  color: #000000ff;
+  font-size: 20px;
+  padding: 10px; }
+
+.card-title-hospedaje:hover {
+  font-size: 25px; }
+
+/* Cabañas */
 .cabañas {
   display: flex;
   flex-direction: column; }
   .cabañas .col-caracteristicas {
     width: 400px; }
     .cabañas .col-caracteristicas img {
-      height: 300px; }
+      height: auto; }
+  .cabañas .title-hospedaje {
+    text-align: center; }
   .cabañas .card-body ul li {
     text-decoration: none;
     list-style: none;
@@ -495,6 +466,7 @@ section div.col {
     font-size: 20px;
     padding-right: 10px; }
 
+/* Habitaciones */
 .habitaciones {
   display: flex;
   flex-direction: column;

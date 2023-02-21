@@ -1,55 +1,5 @@
-main.hospedaje {
-    height: 600px;
-    display:block;
-}
+/* Hospedaje */
 
-section {
-    .alojamiento {
-        margin-top: 0%;
-        padding-bottom: 20%;
-    }
-    div.col {
-        margin-top: 0%;
-        margin-bottom: 10%;
-    }
-}
-
-#booking-form {
-    margin: 5px 0;
-    padding: 2% 5%;
-}
-.tipo-alojamiento {
-    align-items: center;
-    display: flex;
-    justify-content:space-evenly;
-    width: 100%;
-    height: auto;
-    .card a {
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        color: whitesmoke;
-        font-size: 24px;
-        margin: -90px 0px;
-        z-index: 1;
-    }
-    .tipo-alojamiento .card a {
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        color: whitesmoke;
-        font-size: 24px;
-        margin: -90px 0px;
-        z-index: 1; 
-    }
-      .tipo-alojamiento .card:hover a {
-        font-size: 30px; }
-    
-
-.card:hover a {
-    font-size: 25px
-}
-}
 .row {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
@@ -59,22 +9,37 @@ section {
     margin-right: calc(-.5 * var(--bs-gutter-x));
     margin-left: calc(-.5 * var(--bs-gutter-x));
     justify-content:space-evenly;
-    
+    margin-bottom: 10px;
 }
 
-.title-hospedaje {
-    text-align: center;
+.tipo-alojamiento {
     margin-bottom: 5%;
 }
 
+.card-title-hospedaje {
+    text-align: center;
+    text-decoration: none;
+    color: #000000ff;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.card-title-hospedaje:hover {
+    font-size: 25px;
+}
+
+/* Cabañas */
 .cabañas {
     display: flex;
     flex-direction: column;
     .col-caracteristicas {
         width: 400px;
         img {
-            height: 300px;
+            height: auto;
         }
+    }
+    .title-hospedaje {
+        text-align: center;
     }
     .card-body {
         ul li {
@@ -88,6 +53,8 @@ section {
         }
     }
 }
+
+/* Habitaciones */
 
 .habitaciones {
     display: flex;
